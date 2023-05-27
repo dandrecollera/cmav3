@@ -17,6 +17,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/login', function () {
+    return view('login');
+});
+Route::get('/home', function () {
+    return view('publicview.home');
+});
+Route::get('/about', function () {
+    return view('publicview.about');
+});
+Route::get('/requirements', function () {
+    return view('publicview.requirements');
+});
+
+
 
 //GUEST/PUBLIC
 
@@ -78,3 +92,4 @@ Route::get('/', function () {
     });
 
 //TENANT
+
