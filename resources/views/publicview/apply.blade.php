@@ -70,7 +70,7 @@
                             </div>
 
                             <div class="mb-3">
-                                <button class="btn btn-dark btn-rounded" data-mdb-target="#exampleModalToggle22" data-mdb-toggle="modal" data-mdb-dismiss="modal">
+                                <button class="btn btn-dark btn-rounded" data-mdb-target="#submitModal" data-mdb-toggle="modal" data-mdb-dismiss="modal">
                                     Submit
                                   </button>
                             </div>
@@ -81,7 +81,7 @@
         </div>
     </form>
 
-    <div class="modal fade" id="exampleModalToggle22" aria-hidden="true" aria-labelledby="exampleModalToggleLabel22" tabindex="-1">
+    <div class="modal fade" id="submitModal" aria-hidden="true" aria-labelledby="submitModalToggleLabel22" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
