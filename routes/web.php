@@ -13,13 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('/login', function () {
     return view('login');
 });
+
+//GUEST/PUBLIC
+
 Route::get('/home', function () {
     return view('publicview.home');
 });
@@ -29,19 +29,14 @@ Route::get('/about', function () {
 Route::get('/requirements', function () {
     return view('publicview.requirements');
 });
-
-
-
-//GUEST/PUBLIC
-
+Route::get('/apply', function () {
+    return view('publicview.apply');
+});
 
 //ADMIN
 
 
     //applicants
-    Route::get('/profiling', function () {
-        return view('admin.applicants.profiling');
-    });
     Route::get('/listofapplicants', function () {
         return view('admin.applicants.listofapplicants');
     });
@@ -49,6 +44,9 @@ Route::get('/requirements', function () {
     //area
     Route::get('/area-add', function () {
         return view('admin.area.area-add');
+    });
+    Route::get('/area-view', function () {
+        return view('admin.area.area-view');
     });
 
     //floors
@@ -63,21 +61,27 @@ Route::get('/requirements', function () {
     Route::get('/announcement', function () {
         return view('admin.homepage.announcement');
     });
-    Route::get('/requirements', function () {
-        return view('admin.homepage.requirements');
+    Route::get('/requirement', function () {
+        return view('admin.homepage.requirement');
     });
-    Route::get('/announcement', function () {
-        return view('admin.homepage.announcement');
+    Route::get('/abouts', function () {
+        return view('admin.homepage.abouts');
     });
 
     //sections
     Route::get('/sections-add', function () {
         return view('admin.sections.sections-add');
     });
+    Route::get('/sections-view', function () {
+        return view('admin.sections.sections-view');
+    });
 
     //stalls
     Route::get('/stalls-add', function () {
         return view('admin.stalls.stalls-add');
+    });
+    Route::get('/stalls-view', function () {
+        return view('admin.stalls.stalls-view');
     });
 
     //tenants
@@ -92,4 +96,12 @@ Route::get('/requirements', function () {
     });
 
 //TENANT
+
+    //transaction
+    Route::get('/bill-notice', function () {
+        return view('tenant.transaction.bill-notice');
+    });
+    Route::get('/payment-history', function () {
+        return view('tenant.transaction.payment-history');
+    });
 
