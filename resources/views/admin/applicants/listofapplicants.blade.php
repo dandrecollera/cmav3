@@ -17,20 +17,24 @@
         <thead class="table-dark">
             <tr>
                 <th scope="col">ID</th>
+                <th scope="col">Applicant No.</th>
                 <th scope="col">Avatar</th>
                 <th scope="col">Fullname</th>
                 <th scope="col">Birthday</th>
                 <th scope="col">Contact Number</th>
+                <th scope="col">Email Address</th>
                 <th scope="col">Action</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>1</td>
+                <td>0001</td>
                 <td>IMG SRC</td>
                 <td>Kim Taehyung</td>
                 <td>12/30/1995</td>
                 <td>09123456789</td>
+                <td>kth@gmail.com</td>
                 <td>
                     <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-toggle="modal" data-mdb-target="#viewModal">View</button>
                 </td>
@@ -53,33 +57,42 @@
                 </div>
 
                 <div class="mb-3 form-outline">
-                    <input class="form-control" id="fullname" name="fullname"/>
+                    <input class="form-control" id="fullname" name="fullname" readonly/>
+                    <label class="form-label" for="typeText">Applicant No.</label>
+                </div>
+
+                <div class="mb-3 form-outline">
+                    <input class="form-control" id="fullname" name="fullname" readonly/>
                     <label class="form-label" for="typeText">Fullname</label>
                 </div>
 
                 <div class="mb-3 form-outline">
-                    <textarea class="form-control" id="address" name="address" rows="2"></textarea>
+                    <textarea class="form-control" id="address" name="address" rows="2" readonly></textarea>
                     <label class="form-label" for="typeText">Address</label>
                 </div>
 
                 <div class="mb-3 form-outline">
-                    <input class="form-control" type="date" id="birthday" name="birthday"/>
+                    <input class="form-control" type="text" id="birthday" name="birthday" readonly/>
                     <label class="form-label" for="typeText">Birthday</label>
                 </div>
 
                 <div class="mb-3 form-outline">
-                    <input id="contactnum" name="contactnum" class="form-control" maxlength="11"/>
+                    <input id="contactnum" name="contactnum" class="form-control" readonly/>
                     <label class="form-label" for="form16">Contact No.</label>
                 </div>
 
+                <div class="mb-3 form-outline">
+                    <input id="contactnum" name="contactnum" class="form-control" readonly/>
+                    <label class="form-label" for="form16">Email Address</label>
+                </div>
+
                 <div class="mb-3">
-                    <p1>button para sa makita contract???</p1>
+                    <p1>pdf ng requirements</p1>
                 </div>
 
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-dark btn-rounded">Save changes</button>
             </div>
           </div>
         </div>
