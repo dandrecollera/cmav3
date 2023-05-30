@@ -20,14 +20,14 @@ Route::get('/login', function () {
 
 //GUEST/PUBLIC
 
-Route::get('/home', function () {
+Route::get('/', function () {
     return view('publicview.home');
 });
 Route::get('/about', function () {
     return view('publicview.about');
 });
-Route::get('/requirements', function () {
-    return view('publicview.requirements');
+Route::get('/availablestalls', function () {
+    return view('publicview.availablestalls');
 });
 Route::get('/apply', function () {
     return view('publicview.apply');

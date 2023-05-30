@@ -246,8 +246,7 @@ nav .fa{
               <ul>
                  <li><a href="/home">HOME</a></li>
                  <li><a href="/about">ABOUT</a></li>
-                 <li><a href="/requirements">REQUIREMENTS</a></li>
-                 <li><a href="/apply">STALLS</a></li>
+                 <li><a href="/availablestalls">STALLS</a></li>
                  <li><a href="/apply">APPLY</a></li>
               </ul>
            </div>
@@ -290,7 +289,7 @@ nav .fa{
 
     <section class="cta">
         <h1>Inquire for availing a stall in our building.</h1>
-        <a href="/requirements" class="hero-btn">CLICK FOR MORE</a>
+        <a href="/apply" class="hero-btn">CLICK FOR MORE</a>
     </section>
 
     <section class="footer">
