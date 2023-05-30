@@ -88,6 +88,9 @@ Route::get('/apply', function () {
     Route::get('/rent', function () {
         return view('admin.tenants.rent');
     });
+    Route::get('/listoftenants', function () {
+        return view('admin.tenants.listoftenants');
+    });
 
 
     //lost and found
