@@ -8,6 +8,15 @@
 
     <link rel="stylesheet" href="css/mdb.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style type="text/css">
+        .photo2b2{
+            max-width: 200px;
+            min-height: 200px;
+            object-fit:cover;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
     {{--list of approved applicants--}}
@@ -30,7 +39,7 @@
             <tr>
                 <td>1</td>
                 <td>0001</td>
-                <td>IMG SRC</td>
+                <td><img src="/img/cma-admin1.png" style="width: 30px; height: 30px" class="rounded-circle"></td>
                 <td>Kim Taehyung</td>
                 <td>12/30/1995</td>
                 <td>09123456789</td>
@@ -52,8 +61,8 @@
               <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div class="mb-3">
-                    <p1>IMAGE DITO</p1>
+                <div class="mb-3 d-flex flex-column align-items-center">
+                    <img src="/img/cma-admin1.png" class="photo2b2">
                 </div>
 
                 <div class="mb-3 form-outline">

@@ -44,6 +44,86 @@
         </tbody>
     </table>
 
+    <!-- Payment Modal -->
+    <div class="modal fade" id="payModal" tabindex="-1" aria-labelledby="payModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Payment</h5>
+                <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3 form-outline">
+                    <input class="form-control" id="ornum" name="ornum" readonly/>
+                    <label class="form-label" for="typeText">OR No.</label>
+                </div>
+                <div class="mb-3 form-outline">
+                    <input class="form-control" id="billnum" name="billnum" readonly/>
+                    <label class="form-label" for="typeText">Bill No.</label>
+                </div>
+                <div class="mb-3 form-outline">
+                    <input class="form-control" id="month" name="month" readonly/>
+                    <label class="form-label" for="typeText">Month</label>
+                </div>
+
+                <div class="mb-3 form-outline">
+                    <input class="form-control" id="billdate" name="billdate" readonly/>
+                    <label class="form-label" for="typeText">Bill Date</label>
+                </div>
+
+                <div class="mb-3 form-outline">
+                    <input id="billingperiod" name="billingperiod" class="form-control" readonly/>
+                    <label class="form-label" for="form16">Billing Period</label>
+                </div>
+
+                <div class="mb-3 form-outline">
+                    <input id="paymentdate" name="paymentdate" class="form-control" readonly/>
+                    <label class="form-label" for="form16">Payment Date</label>
+                </div>
+
+                <div class="mb-3 form-outline">
+                    <input id="outstandingbal" name="outstandingbal" class="form-control" readonly/>
+                    <label class="form-label" for="form16">Outstanding Balance</label>
+                </div>
+
+                <div class="mb-3 form-outline">
+                    <input id="amounttobepaid" name="amounttobepaid" class="form-control" readonly/>
+                    <label class="form-label" for="form16">Amount to be Paid</label>
+                </div>
+
+                <div class="mb-3 form-outline">
+                    <input class="form-control" id="amount" name="amount"/>
+                    <label class="form-label" for="typeText">Amount</label>
+                </div>
+
+                <div class="mb-3">
+                    <p1>Mode of Payment</p1>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="paymentRadioDefault" id="gcashRadioDefault1"/>
+                        <label class="form-check-label" for="flexRadioDefault1"> Gcash </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="paymentRadioDefault" id="cashRadioDefault2"/>
+                        <label class="form-check-label" for="flexRadioDefault2"> Cash </label>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="form16">Upload Proof</label>
+                    <input type="file" class="form-control" id="image" required/>
+                </div>
+
+                <div class="mb-3 form-outline">
+                    <input class="form-control" id="refnum" name="refnum"/>
+                    <label class="form-label" for="typeText">Reference Number</label>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
     <script src="js/mdb.min.js"></script>
 </body>
 </html>

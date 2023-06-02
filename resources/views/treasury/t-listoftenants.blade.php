@@ -17,7 +17,7 @@
             border-radius: 10px;
         }
     </style>
-
+    
 </head>
 <body>
 
@@ -218,6 +218,7 @@
               <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
+
                 <div class="mb-3 d-flex flex-column align-items-center">
                     <img src="/img/cma-admin1.png" class="photo2b2">
                 </div>
@@ -292,35 +293,6 @@
           </div>
         </div>
       </div>
-
-    {{--<script>
-            // Get the edit button element
-            var editButton = document.getElementById("edit");
-                    
-            // Get the input elements
-            var fullnameInput = document.getElementById("fullname");
-            var contactInput = document.getElementById("contact");
-            var emailInput = document.getElementById("email");
-            var tenanttypeInput = document.getElementById("tenanttype");
-            var stallnameInput = document.getElementById("stallname");
-            var rentalfeetypeInput = document.getElementById("rentalfeetype");
-            var stallnumInput = document.getElementById("stallnum");
-            var feeInput = document.getElementById("fee");
-            var updateButton = document.getElementById("update");
-            // Add an event listener to the edit button
-            editButton.addEventListener("click", function() {
-            // Enable the input fields
-            fullnameInput.removeAttribute("readonly");
-            contactInput.removeAttribute("readonly");
-            emailInput.removeAttribute("readonly");
-            tenanttypeInput.removeAttribute("readonly");
-            stallnameInput.removeAttribute("readonly");
-            rentalfeetypeInput.removeAttribute("readonly");
-            stallnumInput.removeAttribute("readonly");
-            feeInput.removeAttribute("readonly");
-            updateButton.removeAttribute("disabled");
-            });
-        </script>--}}
 
     <script src="js/mdb.min.js"></script>
 </body>

@@ -4,116 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Lost and Found</title>
+    <title>Report</title>
 
     <link rel="stylesheet" href="css/mdb.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    
 </head>
 <body>
 
-
     <table class="table">
-        <caption>Lost and Found Items</caption>
+        <caption>List of Reports</caption>
         <thead class="table-dark">
             <tr>
-                <th scope="col">Item</th>
-                <th scope="col">Description</th>
+                <th scope="col">Report No.</td>
                 <th scope="col">Date</th>
+                <th scope="col">Concern</th>
+                <th scope="col">Floor No.</th>
+                <th scope="col">Stall No.</th>
                 <th scope="col">Status</th>
                 <th scope="col">Actions</th>
                 <th scope="col">
                     <button type="button" class="btn btn-outline-light btn-rounded" data-mdb-toggle="modal" data-mdb-target="#addModal">
-                        Add Item
+                        Add a Report
                     </button>
                 </th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Bag</td>
-                <td>Taehyung merch</td>
-                <td>05/24/2023</td>
-                <td>Lost</td>
+                <td>Report No. 000001</td>
+                <td>05/25/2023</td>
+                <td>Sira ang ilaw</td>
+                <td>Lower Ground Floor</td>
+                <td>FGS 1</td>
+                <td>Pending</td>
                 <td><div class="btn-group" role="group">
-                    <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-toggle="modal" data-mdb-target="#editModal">Edit</button>
                     <button type="button" class="btn btn-outline-dark btn-rounded">Delete</button>
                   </div></td>
             </tr>
         </tbody>
     </table>
 
-      <!-- Add Item Modal -->
-      <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
+    <!-- Add Item Modal -->
+    <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Add an Item</h5>
+              <h5 class="modal-title" id="exampleModalLabel">Add a Report</h5>
               <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-                <div class="input-group mb-3">
-                    <input type="file" class="form-control" id="inputGroupFile02" />
-                </div>
-                <div class="mb-3 form-outline">
-                    <input type="text" id="item" name="item" class="form-control"/>
-                    <label class="form-label" for="form12">Item</label>
-                </div>
-                <div class="mb-3 form-outline">
-                    <textarea class="form-control" id="description" name="description" rows="4"></textarea>
-                    <label class="form-label" for="description">Description</label>
+                <div class="modal-body"><div class="mb-3 form-outline">
+                  <input class="form-control" id="reportnum" name="reportnum" readonly/>
+                  <label class="form-label" for="description">Report Number</label>
                 </div>
                 <div class="mb-3 form-outline">
                     <input type="date" id="date" name="date" class="form-control"/>
                     <label class="form-label" for="form12">Date</label>
                 </div>
+                <div class="mb-3 form-outline">
+                    <textarea class="form-control" id="concern" name="concern" rows="3"></textarea>
+                    <label class="form-label" for="description">Concern</label>
+                </div>
                 <div class="mb-3">
-                    <label for="inputFloorDes" class="form-label">Status</label>
+                    <label for="inputFloorDes" class="form-label">Floor Number</label>
                     <select id="area" name="area" class="form-select">
-                        <option selected>Status</option>
-                        <option>Lost</option>
-                        <option>Found</option>
+                        <option selected>-- Choose --</option>
+                        <option>Lower Ground Floor</option>
+                        <option>Upper Ground Floor</option>
+                        <option>2nd Floor</option>
                     </select>
+                </div>
+                <div class="mb-3 form-outline">
+                    <input class="form-control" id="stallnum" name="stallnum"/>
+                    <label class="form-label" for="description">Stall Number</label>
                 </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-dark btn-rounded">Save changes</button>
+              <button type="button" class="btn btn-dark btn-rounded">Upload</button>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Edit Item Modal -->
+      <!-- Edit Item Modal
       <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="editModalLabel">Edit an Item</h5>
+              <h5 class="modal-title" id="editModalLabel">Edit Announcement</h5>
               <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div class="mb-3">
-                  <img src="/img/cma-admin1.png" style="width: 150px; height: 150px">
-                </div>
                 <div class="mb-3 form-outline">
-                    <input type="text" id="item" name="item" class="form-control" readonly/>
-                    <label class="form-label" for="form12">Item</label>
-                </div>
-                <div class="mb-3 form-outline">
-                    <textarea class="form-control" id="description" name="description" readonly rows="4"></textarea>
-                    <label class="form-label" for="description">Description</label>
-                </div>
-                <div class="mb-3 form-outline">
-                    <input type="date" id="date" name="date" class="form-control" readonly/>
+                    <input type="date" id="date" name="date" class="form-control"/>
                     <label class="form-label" for="form12">Date</label>
                 </div>
-                <div class="mb-3">
-                    <label for="inputFloorDes" class="form-label">Status</label>
-                    <select id="area" name="area" class="form-select">
-                        <option selected>Status</option>
-                        <option>Lost</option>
-                        <option>Found</option>
-                    </select>
+                <div class="mb-3 form-outline">
+                    <textarea class="form-control" id="event" name="event" rows="3"></textarea>
+                    <label class="form-label" for="description">Event</label>
                 </div>
             </div>
             <div class="modal-footer">
@@ -122,7 +112,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div>-->
     <script src="js/mdb.min.js"></script>
 </body>
 </html>
