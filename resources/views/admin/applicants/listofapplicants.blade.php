@@ -1,3 +1,4 @@
+@extends('layouts.admin-master')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +11,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
+@section('content')
     {{--list of approved applicants--}}
 
     <table class="table">
@@ -101,3 +103,4 @@
     <script src="js/mdb.min.js"></script>
 </body>
 </html>
+@endsection

@@ -17,6 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/login', function () {
     return view('login');
 });
+Route::get('/admin-sidenav', function () {
+    return view('layouts.admin-sidenav');
+});
 
 //GUEST/PUBLIC
 
@@ -35,7 +38,10 @@ Route::get('/apply', function () {
 
 //ADMIN
 
-
+    //dashboard
+    Route::get('/admin-dashboard', function () {
+        return view('admin.admin-dashboard');
+    });
     //applicants
     Route::get('/listofapplicants', function () {
         return view('admin.applicants.listofapplicants');
@@ -64,8 +70,8 @@ Route::get('/apply', function () {
     Route::get('/requirement', function () {
         return view('admin.homepage.requirement');
     });
-    Route::get('/abouts', function () {
-        return view('admin.homepage.abouts');
+    Route::get('/about-edit', function () {
+        return view('admin.homepage.about-edit');
     });
 
     //sections
@@ -87,6 +93,9 @@ Route::get('/apply', function () {
     //tenants
     Route::get('/rent', function () {
         return view('admin.tenants.rent');
+    });
+    Route::get('/listoftenants', function () {
+        return view('admin.tenants.listoftenants');
     });
 
 

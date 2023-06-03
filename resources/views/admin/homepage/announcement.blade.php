@@ -1,3 +1,4 @@
+@extends('layouts.admin-master')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +13,7 @@
     
 </head>
 <body>
-
+@section('content')
 
     <table class="table">
         <caption>Announcement</caption>
@@ -94,3 +95,4 @@
     <script src="js/mdb.min.js"></script>
 </body>
 </html>
+@endsection

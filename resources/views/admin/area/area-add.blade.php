@@ -1,3 +1,4 @@
+@extends('layouts.admin-master')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,12 +11,14 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
+@section('content')
 
-    <div class="container mt-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-6">
-                <div class="card">
-                    <div class="card-body">
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <form>
                         <div class="mb-3">
                             <label for="inputFloorNum" class="form-label">Floor Number</label>
                             <select id="floornumber" name="floornumber" class="form-select">
@@ -42,12 +45,14 @@
                         <div class="text-center">
                             <button type="submit" class="btn btn-dark btn-rounded">Save</button>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
-            </div>
         </div>
+    </div>
+</div>
 
-        <script src="js/mdb.min.js"></script>
+<script src="js/mdb.min.js"></script>
 </body>
 </html>
+@endsection
