@@ -43,7 +43,7 @@
             <div class="modal-body">
                 <div class="input-group mb-3">
                     <input type="file" class="form-control" id="inputGroupFile02" />
-                  </div>
+                </div>
                 <div class="mb-3 form-outline">
                     <input type="text" id="item" name="item" class="form-control"/>
                     <label class="form-label" for="form12">Item</label>
@@ -82,9 +82,9 @@
               <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div class="input-group mb-3">
-                    <input type="file" class="form-control" id="inputGroupFile02" />
-                  </div>
+                <div class="mb-3">
+                  <img src="/img/cma-admin1.png" style="width: 150px; height: 150px">
+                </div>
                 <div class="mb-3 form-outline">
                     <input type="text" id="item" name="item" class="form-control" readonly/>
                     <label class="form-label" for="form12">Item</label>
