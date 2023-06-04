@@ -257,7 +257,8 @@ nav .fa{
            <ul>
               <li><a href="/home">HOME</a></li>
               <li><a href="/about">ABOUT</a></li>
-              <li><a href="/requirements">REQUIREMENTS</a></li>
+              <li><a href="/availablestalls">STALLS</a></li>
+              <li><a href="/apply">APPLY</a></li>
            </ul>
         </div>
         <i class="fa fa-bars" onclick="showMenu()"></i>
