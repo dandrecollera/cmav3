@@ -54,7 +54,6 @@
                     <div class="btn-group" role="group">
                         <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-toggle="modal" data-mdb-target="#billModal">Bill</button>
                         <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-toggle="modal" data-mdb-target="#viewModal">View</button>
-                        <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-toggle="modal" data-mdb-target="#archiveModal">Archive</button>
                     </div>
                 </td>
                 
@@ -268,27 +267,6 @@
                 <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-dismiss="modal">Close</button>
                 {{--<button type="button" class="btn btn-dark btn-rounded" id="edit">Edit</button>
                 <button type="submit" class="btn btn-outline-dark btn-rounded" id="update" disabled>Update</button>--}}
-            </div>
-          </div>
-        </div>
-      </div>
-
-    <!-- archive tenant Modal -->
-    <div class="modal fade" id="archiveModal" tabindex="-1" aria-labelledby="archiveModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Archiving a Tenant</h5>
-              <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-
-            <h4>Do you really want to archive this tenant?</h4>
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-dark btn-rounded">Okay</button>
             </div>
           </div>
         </div>
