@@ -77,14 +77,8 @@ Route::get('/apply', function () {
     });
 
     // report
-    Route::get('/bill-reports', function () {
-        return view('admin.repors.bill-reports');
-    });
     Route::get('/list-of-archived-reports', function () {
         return view('admin.repors.list-of-archived-reports');
-    });
-    Route::get('/payment-reports', function () {
-        return view('admin.repors.payment-reports');
     });
     Route::get('/reports', function () {
         return view('admin.repors.reports');
@@ -107,15 +101,19 @@ Route::get('/apply', function () {
     });
 
     //tenants
+    Route::get('/list-of-archived-reports', function () {
+        return view('admin.tenants.list-of-archived-reports');
+    });
     Route::get('/listoftenants', function () {
         return view('admin.tenants.listoftenants');
     });
     Route::get('/rent', function () {
         return view('admin.tenants.rent');
     });
-    Route::get('/listoftenants', function () {
-        return view('admin.tenants.listoftenants');
+    Route::get('/rerports', function () {
+        return view('admin.tenants.reports');
     });
+    
 
 
     //admin-account-settings
@@ -179,11 +177,11 @@ Route::get('/apply', function () {
     });
 
     //reports
-    Route::get('/t-payment-reports', function () {
-        return view('treasury.repors.t-payment-reports');
+    Route::get('/payment-reports', function () {
+        return view('treasury.repors.payment-reports');
     });
-    Route::get('/t-bill-reports', function () {
-        return view('treasury.repors.t-bill-reports');
+    Route::get('/bill-reports', function () {
+        return view('treasury.repors.bill-reports');
     });
 
     //treasury account settings
