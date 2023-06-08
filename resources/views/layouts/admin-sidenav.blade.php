@@ -290,7 +290,7 @@
                 </ul>
             </li>
 
-            {{--<li>
+            <li>
                 <div class="icon-link">
                     <a href="#">
                         <i class='bx bxs-user-rectangle'></i>
@@ -301,9 +301,9 @@
                 <ul class="sub-menu">
                     <li><a class ="link_name"href="#">Applicants</a></li>
                     <li><a href="/listofapplicants">List of Applicants</a></li>
-                    <li><a href="#">Requirements</a></li>
+                    <li><a href="/listofapproved">List of Approved Applicants</a></li>
                 </ul>
-            </li>--}}
+            </li>
 
             <li>
                 <div class="icon-link">

@@ -23,7 +23,7 @@ Route::get('/admin-sidenav', function () {
 
 //GUEST/PUBLIC
 
-Route::get('/', function () {
+Route::get('/home', function () {
     return view('publicview.home');
 });
 Route::get('/about', function () {
@@ -48,6 +48,11 @@ Route::get('/apply', function () {
     Route::get('/listofapplicants', function () {
         return view('admin.applicants.listofapplicants');
     });
+    Route::get('/listofapproved', function () {
+        return view('admin.applicants.listofapproved');
+    });
+
+
 
     //area
     Route::get('/area-add', function () {

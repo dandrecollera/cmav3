@@ -27,8 +27,6 @@
             <td>
                 <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-toggle="modal"
                     data-mdb-target="#viewModal">View</button>
-                    <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-toggle="modal"
-                    data-mdb-target="#approveModal">Approve</button>
             </td>
 
         </tr>
@@ -90,23 +88,5 @@
     </div>
 </div>
 
-<!-- view Modal -->
-<div class="modal fade" id="approveModal" tabindex="-1" aria-labelledby="approveModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Applicant's Info</h5>
-                <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <h5>Do you really want to approve this applicant?</h5>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-dark btn-rounded">Yes</button>
-            </div>
-        </div>
-    </div>
-</div>
 
 @endsection
