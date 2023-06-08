@@ -1,25 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>List of Tenants</title>
+@extends('layouts.treasury-master')
 
-    <link rel="stylesheet" href="css/mdb.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <style type="text/css">
-        .photo2b2{
-            max-width: 200px;
-            min-height: 200px;
-            object-fit:cover;
-            border-radius: 10px;
-        }
-    </style>
-    
-</head>
-<body>
+@section('content')
 
     <table class="table">
         <caption>List of Tenants</caption>
@@ -294,6 +275,4 @@
         </div>
       </div>
 
-    <script src="js/mdb.min.js"></script>
-</body>
-</html>
+@endsection
