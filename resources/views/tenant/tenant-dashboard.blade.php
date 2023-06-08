@@ -1,7 +1,18 @@
-@extends('layouts.admin-master')
+@extends('layouts.tenant-master')
 
 @section('content')
+<style>
+    .content-wrapper {
+        margin-left: 20%;
+        transition: margin-left 0.5s ease;
+      }
+      
+      .sidebar.close ~ .content-wrapper {
+        margin-left: 70px;;
+      }
+    </style>
 
+<div class="content-wrapper">
 <div class="bg-image" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg');
             height: 100vh">
 

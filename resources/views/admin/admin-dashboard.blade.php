@@ -1,5 +1,18 @@
 @extends('layouts.admin-master')
+
 @section('content')
+<style>
+    .content-wrapper {
+        margin-left: 20%;
+        transition: margin-left 0.5s ease;
+      }
+      
+      .sidebar.close ~ .content-wrapper {
+        margin-left: 80px;;
+      }
+    </style>
+  
+  <div class="content-wrapper">
 <h1 class="mx-3 mt-4">Dashboard</h1>
 <div class="row p-3">
     <div class="col-xl-3 col-md-6">
@@ -90,6 +103,6 @@
         </div>
     </div>
 </div>
-<script src="js/mdb.min.js"></script>
+</div>
 
 @endsection

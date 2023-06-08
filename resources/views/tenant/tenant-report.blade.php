@@ -1,8 +1,18 @@
 @extends('layouts.tenant-master')
 
 @section('content')
+<style>
+  .content-wrapper {
+      margin-left: 20%;
+      transition: margin-left 0.5s ease;
+    }
+    
+    .sidebar.close ~ .content-wrapper {
+      margin-left: 80px;;
+    }
+  </style>
 
-
+<div class="content-wrapper">
     <table class="table">
         <caption>List of Reports</caption>
         <thead class="table-dark">
@@ -77,6 +87,7 @@
           </div>
         </div>
       </div>
+    </div>
 
       <!-- Edit Item Modal
       <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">

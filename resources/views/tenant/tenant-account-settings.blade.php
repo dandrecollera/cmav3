@@ -11,8 +11,18 @@
             object-fit:cover;
             border-radius: 10px;
         }
+        
+        .content-wrapper {
+            margin-left: 20%;
+            transition: margin-left 0.5s ease;
+          }
+          
+          .sidebar.close ~ .content-wrapper {
+            margin-left: 70px;;
+          }
     </style>
 
+<div class="content-wrapper">
 <div class="row p-4">
     <div class="col-6">
             <h5>Tenant Information</h5>
@@ -87,6 +97,7 @@
                 <button type="submit" class="btn btn-dark btn-rounded">Update</button>
             </div>
     </div>
+</div>
 </div>
 
 
