@@ -20,6 +20,12 @@ Route::get('/login', function () {
 Route::get('/admin-sidenav', function () {
     return view('layouts.admin-sidenav');
 });
+Route::get('/tenant-sidenav', function () {
+    return view('layouts.tenant-sidenav');
+});
+Route::get('/treasury-sidenav', function () {
+    return view('layouts.treasury-sidenav');
+});
 
 //GUEST/PUBLIC
 
@@ -153,8 +159,8 @@ Route::get('/apply', function () {
     });
 
     //lost adn found
-    Route::get('/lost-and-found', function () {
-        return view('tenant.lost-and-found');
+    Route::get('/tenant-lostandfound', function () {
+        return view('tenant.tenant-lostandfound');
     });
 
     //tenant account settings

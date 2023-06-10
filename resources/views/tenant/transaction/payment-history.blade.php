@@ -1,7 +1,8 @@
-@extends('layouts.admin-master')
+@extends('layouts.tenant-master')
 
 @section('content')
 
+    <div class="content-wrapper">
     <table class="table">
         <caption>Payment History</caption>
         <thead class="table-dark">
@@ -53,5 +54,6 @@
             </tr>
         </tbody>
     </table>
+    </div>
 
 @endsection

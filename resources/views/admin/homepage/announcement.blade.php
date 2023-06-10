@@ -2,6 +2,7 @@
 
 @section('content')
 
+<div class="content-wrapper">
     <table class="table">
         <caption>Announcement</caption>
         <thead class="table-dark">
@@ -89,5 +90,5 @@
           </div>
         </div>
       </div>
-
+</div>
 @endsection

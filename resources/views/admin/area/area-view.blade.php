@@ -2,6 +2,7 @@
 
 @section('content')
 
+<div class="content-wrapper">
 <div class="container mt-5">
     <div class="table-responsive">
         <table class="table">
@@ -33,5 +34,5 @@
         </table>
     </div>
 </div>
-
+</div>
 @endsection

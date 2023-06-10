@@ -20,7 +20,7 @@
 </head>
 <body>
 
-@include('layouts.admin-sidenav')
+@include('layouts.tenant-sidenav')
 
 @yield('content')
 

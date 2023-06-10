@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Lost and Found</title>
+@extends('layouts.tenant-master')
 
-    <link rel="stylesheet" href="css/mdb.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+@section('content')
+
 
     <style type="text/css">
         .photo2b2{
@@ -16,12 +10,9 @@
             object-fit:cover;
             border-radius: 10px;
         }
-    
     </style>
-</head>
-<body>
 
-
+    <div class="content-wrapper">
     <table class="table">
         <caption>Lost and Found Items</caption>
         <thead class="table-dark">
@@ -84,7 +75,5 @@
           </div>
         </div>
       </div>
-
-    <script src="js/mdb.min.js"></script>
-</body>
-</html>
+    </div>
+@endsection

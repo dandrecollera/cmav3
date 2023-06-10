@@ -1,7 +1,8 @@
 @extends('layouts.admin-master')
 
 @section('content')
-
+  
+  <div class="content-wrapper">
     <table class="table">
         <caption>Lost and Found Items</caption>
         <thead class="table-dark">
@@ -113,5 +114,5 @@
           </div>
         </div>
       </div>
-
+  </div>
 @endsection

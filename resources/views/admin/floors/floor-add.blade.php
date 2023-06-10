@@ -1,7 +1,18 @@
 @extends('layouts.admin-master')
 
 @section('content')
+<style>
+    .content-wrapper {
+        margin-left: 20%;
+        transition: margin-left 0.5s ease;
+      }
+      
+      .sidebar.close ~ .content-wrapper {
+        margin-left: 70px;;
+      }
+    </style>
 
+<div class="content-wrapper">
     <div class="container mt-5 p-5">
         <div class="row justify-content-center">
             <div class="col-lg-6">
@@ -23,5 +34,5 @@
             </div>
             </div>
         </div>
-
+</div>
 @endsection

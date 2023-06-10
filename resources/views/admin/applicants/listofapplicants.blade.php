@@ -1,6 +1,8 @@
 @extends('layouts.admin-master')
 
 @section('content')
+
+<div class="content-wrapper">
 <table class="table">
     <caption>List of Applicants</caption>
     <thead class="table-dark">
@@ -88,6 +90,7 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 
 <!-- view Modal -->
