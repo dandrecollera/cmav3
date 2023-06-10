@@ -36,7 +36,7 @@
         </tbody>
     </table>
 
-    <!-- Add Item Modal -->
+    <!-- Add Report Modal -->
     <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">

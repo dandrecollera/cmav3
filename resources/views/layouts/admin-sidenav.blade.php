@@ -278,7 +278,7 @@
                 <div class="icon-link">
                     <a href="#">
                         <i class='bx bx-home' ></i>
-                        <span class="link_name">Home</span>
+                        <span class="link_name">Homepage</span>
                     </a>
                     <i class='bx bx-chevron-down arrow' ></i>
                 </div>
@@ -301,7 +301,7 @@
                 <ul class="sub-menu">
                     <li><a class ="link_name"href="#">Applicants</a></li>
                     <li><a href="/listofapplicants">List of Applicants</a></li>
-                    <li><a href="#">Requirements</a></li>
+                    <li><a href="/listofapproved">List of Approved Applicants</a></li>
                 </ul>
             </li>
 
@@ -315,7 +315,9 @@
                 </div>
                 <ul class="sub-menu">
                     <li><a class ="link_name"href="#">Tenants</a></li>
-                    <li><a href="/listoftenants">List ofTenant</a></li>
+                    <li><a href="/listoftenants">List of Tenant</a></li>
+                    <li><a href="/list-of-archived-reports">List of Archived Tenants</a></li>
+                    <li><a href="/reports">Tenant Reports</a></li>
                     <li><a href="/rent">Rent</a></li>
                 </ul>
             </li>
@@ -335,6 +337,20 @@
                 </ul>
             </li>
 
+            <li>
+                <div class="icon-link">
+                    <a href="#">
+                        <i class='bx bx-objects-horizontal-left'></i>
+                        <span class="link_name">Sections</span>
+                    </a>
+                    <i class='bx bx-chevron-down arrow' ></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class ="link_name"href="#">Sections</a></li>
+                    <li><a href="/sections-add">Add</a></li>
+                    <li><a href="/sections-view">View</a></li>
+                </ul>
+            </li>
             
             <li>
                 <div class="icon-link">
@@ -348,22 +364,6 @@
                     <li><a class ="link_name"href="#">Area</a></li>
                     <li><a href="/area-add">Add</a></li>
                     <li><a href="/area-view">View</a></li>
-                </ul>
-            </li>
-
-            
-            <li>
-                <div class="icon-link">
-                    <a href="#">
-                        <i class='bx bx-objects-horizontal-left'></i>
-                        <span class="link_name">Sections</span>
-                    </a>
-                    <i class='bx bx-chevron-down arrow' ></i>
-                </div>
-                <ul class="sub-menu">
-                    <li><a class ="link_name"href="#">Sections</a></li>
-                    <li><a href="/sections-add">Add</a></li>
-                    <li><a href="/sections-view">View</a></li>
                 </ul>
             </li>
 
@@ -394,27 +394,12 @@
             </li>
 
             <li>
-                <div class="icon-link">
-                    <a href="#">
-                        <i class='bx bx-food-menu'></i>
-                        <span class="link_name">Reports</span>
-                    </a>
-                    <i class='bx bx-chevron-down arrow' ></i>
-                </div>
-                <ul class="sub-menu">
-                    <li><a class ="link_name"href="#">Reports</a></li>
-                    <li><a href="#">Payment</a></li>
-                    <li><a href="#">Bill</a></li>
-                </ul>
-            </li>
-
-            <li>
-                <a href="#">
+                <a href="admin-account-settings">
                     <i class='bx bx-user'></i>
                     <span class="link_name">Account Settings</span>
                 </a>
                 <ul class="sub-menu blank">
-                    <li><a class ="link_name"href="#">Account Settings</a></li>
+                    <li><a class ="link_name"href="/admin-account-settings">Account Settings</a></li>
                 </ul>
             </li>
         

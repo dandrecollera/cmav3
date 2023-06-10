@@ -7,8 +7,9 @@
         <caption>Announcement</caption>
         <thead class="table-dark">
             <tr>
+                <th scope="col">Category</th>
                 <th scope="col">Date</th>
-                <th scope="col">Event</th>
+                <th scope="col">Title</th>
                 <th scope="col">Actions</th>
                 <th scope="col">
                     <button type="button" class="btn btn-outline-light btn-rounded" data-mdb-toggle="modal" data-mdb-target="#addModal">
@@ -19,8 +20,9 @@
         </thead>
         <tbody>
             <tr>
-                <td>05/25/2023</td>
                 <td>Holiday</td>
+                <td>05/25/2023</td>
+                <td>wdas</td>
                 <td><div class="btn-group" role="group">
                     <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-toggle="modal" data-mdb-target="#editModal">Edit</button>
                     <button type="button" class="btn btn-outline-dark btn-rounded">Delete</button>
@@ -39,12 +41,16 @@
             </div>
             <div class="modal-body">
                 <div class="mb-3 form-outline">
+                  <input class="form-control" id="category" name="category"/>
+                  <label class="form-label" for="Category">Category</label>
+                </div>
+                <div class="mb-3 form-outline">
                     <input type="date" id="date" name="date" class="form-control"/>
                     <label class="form-label" for="form12">Date</label>
                 </div>
                 <div class="mb-3 form-outline">
-                    <textarea class="form-control" id="event" name="event" rows="3"></textarea>
-                    <label class="form-label" for="description">Event</label>
+                    <textarea class="form-control" id="title" name="title" rows="3"></textarea>
+                    <label class="form-label" for="description">Title</label>
                 </div>
             </div>
             <div class="modal-footer">
@@ -65,12 +71,16 @@
             </div>
             <div class="modal-body">
                 <div class="mb-3 form-outline">
+                  <input class="form-control" id="category" name="category"/>
+                  <label class="form-label" for="Category">Category</label>
+                </div>
+                <div class="mb-3 form-outline">
                     <input type="date" id="date" name="date" class="form-control"/>
                     <label class="form-label" for="form12">Date</label>
                 </div>
                 <div class="mb-3 form-outline">
-                    <textarea class="form-control" id="event" name="event" rows="3"></textarea>
-                    <label class="form-label" for="description">Event</label>
+                    <textarea class="form-control" id="title" name="title" rows="3"></textarea>
+                    <label class="form-label" for="description">Title</label>
                 </div>
             </div>
             <div class="modal-footer">
