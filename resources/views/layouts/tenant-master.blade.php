@@ -13,8 +13,7 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('assets/css/styles.css')}}" rel="stylesheet" >
-    <link href="{{ asset('assets/css/admin-styles.css')}}" rel="stylesheet" >
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 
     <!-- Scripts -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>

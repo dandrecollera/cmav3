@@ -1,16 +1,7 @@
 @extends('layouts.treasury-master')
 
 @section('content')
-<style>
-.content-wrapper {
-    margin-left: 20%;
-    transition: margin-left 0.5s ease;
-  }
-  
-  .sidebar.close ~ .content-wrapper {
-    margin-left: 70px;;
-  }
-</style>
+
 <div class="content-wrapper">
     <h1 class="mx-3 mt-4">Dashboard</h1>
                         <div class="row p-3">

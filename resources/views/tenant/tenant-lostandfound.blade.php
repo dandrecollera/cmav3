@@ -10,14 +10,6 @@
             object-fit:cover;
             border-radius: 10px;
         }
-        .content-wrapper {
-        margin-left: 20%;
-        transition: margin-left 0.5s ease;
-        }
-      
-        .sidebar.close ~ .content-wrapper {
-        margin-left: 80px;;
-        }
     </style>
 
     <div class="content-wrapper">

@@ -2,16 +2,7 @@
 
 @section('content')
 
-<style>
-    .content-wrapper {
-        margin-left: 20%;
-        transition: margin-left 0.5s ease;
-      }
-      
-      .sidebar.close ~ .content-wrapper {
-        margin-left: 70px;
-      }
-    </style>
+
 
 <div class="content-wrapper">
 <div class="container mt-5">
