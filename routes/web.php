@@ -87,14 +87,6 @@ Route::get('/apply', function () {
         return view('admin.homepage.about-edit');
     });
 
-    // report
-    Route::get('/list-of-archived-reports', function () {
-        return view('admin.repors.list-of-archived-reports');
-    });
-    Route::get('/reports', function () {
-        return view('admin.repors.reports');
-    });
-
     //sections
     Route::get('/sections-add', function () {
         return view('admin.sections.sections-add');
@@ -112,8 +104,8 @@ Route::get('/apply', function () {
     });
 
     //tenants
-    Route::get('/list-of-archived-reports', function () {
-        return view('admin.tenants.list-of-archived-reports');
+    Route::get('/list-of-archived-tenants', function () {
+        return view('admin.tenants.list-of-archived-tenants');
     });
     Route::get('/listoftenants', function () {
         return view('admin.tenants.listoftenants');
@@ -121,7 +113,7 @@ Route::get('/apply', function () {
     Route::get('/rent', function () {
         return view('admin.tenants.rent');
     });
-    Route::get('/rerports', function () {
+    Route::get('/reports', function () {
         return view('admin.tenants.reports');
     });
     

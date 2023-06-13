@@ -117,6 +117,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-dark btn-rounded">Confirm</button>
             </div>
         </div>
     </div>

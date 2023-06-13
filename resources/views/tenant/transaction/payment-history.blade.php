@@ -18,7 +18,6 @@
                 <th scope="col">Amount Paid</th>
                 <th scope="col">Status</th>
                 <th scope="col">Action</th>
-                <th scope="col">Search</th>
             </tr>
         </thead>
         <tbody>

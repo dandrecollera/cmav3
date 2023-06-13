@@ -1,15 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Reports</title>
+@extends('layouts.admin-master')
 
-    <link rel="stylesheet" href="css/mdb.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</head>
-<body>
+@section('content')
+<style>
+    .content-wrapper {
+        margin-left: 20%;
+        transition: margin-left 0.5s ease;
+      }
+      
+      .sidebar.close ~ .content-wrapper {
+        margin-left: 80px;;
+      }
+    </style>
+  
+  <div class="content-wrapper">
     <table class="table">
         <caption>List of Reports</caption>
         <thead class="table-dark">
@@ -80,6 +83,4 @@
           </div>
         </div>
       </div>
-    <script src="js/mdb.min.js"></script>
-</body>
-</html>
+@endsection

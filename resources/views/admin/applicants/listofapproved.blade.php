@@ -1,13 +1,14 @@
 @extends('layouts.admin-master')
 
 @section('content')
+<div class="content-wrapper">
 <table class="table">
     <caption>List of Applicants</caption>
     <thead class="table-dark">
         <tr>
             <th scope="col">ID</th>
             <th scope="col">Applicant No.</th>
-            <th scope="col">Avatar</th>
+            <th scope="col">Image</th>
             <th scope="col">Fullname</th>
             <th scope="col">Birthday</th>
             <th scope="col">Contact Number</th>
@@ -19,7 +20,7 @@
         <tr>
             <td>1</td>
             <td>0001</td>
-            <td><img src="/img/cma-admin1.png" style="width: 30px; height: 30px" class="rounded-circle"></td>
+            <td><img src="/img/cma-admin1.png" style="width: 30px; height: 60px" class="rounded-circle"></td>
             <td>Kim Taehyung</td>
             <td>12/30/1995</td>
             <td>09123456789</td>
@@ -87,6 +88,6 @@
         </div>
     </div>
 </div>
-
+</div>
 
 @endsection
