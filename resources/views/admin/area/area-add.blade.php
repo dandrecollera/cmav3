@@ -13,7 +13,7 @@
                     <form>
                         <div class="mb-3">
                             <label for="inputFloorNum" class="form-label">Floor Number</label>
-                            <select id="floornumber" name="floornumber" class="form-select">
+                            <select id="floornum" name="floornum" class="form-select">
                                 <option selected>Choose Floor</option>
                                 <option>Lower Ground Floor</option>
                                 <option>Upper Ground Floor</option>
