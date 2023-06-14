@@ -18,7 +18,7 @@
     <thead class="table-dark">
         <tr>
             <th scope="col">#</th>
-            <th scope="col">Avatar</th>
+            <th scope="col">Image</th>
             <th scope="col">Fullname</th>
             <th scope="col">Contact Number</th>
             <th scope="col">Email Address</th>
@@ -30,7 +30,7 @@
     <tbody>
         <tr>
             <td>1</td>
-            <td><img src="/img/cma-admin1.png" style="width: 30px; height: 30px" class="rounded-circle"></td>
+            <td><img src="/img/cma-admin1.png" style="width: 30px; height: 60px" class="rounded-circle"></td>
             <td>Kim Taehyung</td>
             <td>09123456789</td>
             <td>kth@gmail.com</td>

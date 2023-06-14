@@ -286,7 +286,7 @@
                     <li><a class ="link_name"href="#">Homepage</a></li>
                     <li><a href="/announcement">Announcements</a></li>
                     <li><a href="/requirement">Requirements</a></li>
-                    <li><a href="/about-edit">About</a></li>
+                    {{--<li><a href="/about-edit">About</a></li>--}}
                 </ul>
             </li>
 
@@ -316,7 +316,7 @@
                 <ul class="sub-menu">
                     <li><a class ="link_name"href="#">Tenants</a></li>
                     <li><a href="/listoftenants">List of Tenant</a></li>
-                    <li><a href="/list-of-archived-reports">List of Archived Tenants</a></li>
+                    <li><a href="/list-of-archived-tenants">List of Archived Tenants</a></li>
                     <li><a href="/reports">Tenant Reports</a></li>
                     <li><a href="/rent">Rent</a></li>
                 </ul>

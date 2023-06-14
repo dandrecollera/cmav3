@@ -205,7 +205,7 @@ nav .fa{
                           </div>
 
                           <div class="mb-3 form-outline">
-                              <input class="form-control" id="fullname" name="fullname" readonly/>
+                              <input class="form-control" id="applicantno" name="applicantno" readonly/>
                               <label class="form-label" for="typeText">Applicant No.</label>
                           </div>
 
@@ -225,7 +225,7 @@ nav .fa{
                           </div>
 
                           <div class="mb-3 form-outline">
-                              <input class="form-control is-valid" id="fullname" name="fullname" required/>
+                              <input class="form-control is-valid" id="emailadd" name="emailadd" required/>
                               <label class="form-label" for="typeText">Email Address</label>
                           </div>
 
@@ -237,12 +237,12 @@ nav .fa{
 
                           <div class="mb-3">
                               <label class="form-label" for="form16">Upload Picture (2x2)</label>
-                              <input type="file" class="form-control" id="image" required/>
+                              <input type="file" class="form-control" name="image" id="image" required/>
                           </div>
 
                           <div class="mb-3">
                               <label class="form-label" for="form16">Upload all Requirements(in PDF form)</label>
-                              <input type="file" class="form-control" id="req" required/>
+                              <input type="file" class="form-control" name="req" id="req" required/>
                           </div>
 
                           <div class="mb-3">

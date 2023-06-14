@@ -275,6 +275,16 @@
             </li>
 
             <li>
+                <a href="/t-listoftenants">
+                    <i class='bx bxs-group' ></i>
+                    <span class="link_name">List of Tenants</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class ="link_name"href="/t-listoftenants">List of Tenants</a></li>
+                </ul>
+            </li>
+
+            <li>
                 <div class="icon-link">
                     <a href="#">
                         <i class='bx bx-food-menu'></i>
@@ -284,18 +294,8 @@
                 </div>
                 <ul class="sub-menu">
                     <li><a class ="link_name"href="#">Reports</a></li>
-                    <li><a href="/t-bill-reports">Tenant Bill</a></li>
-                    <li><a href="/t-payment-reports">Tenant Payment</a></li>
-                </ul>
-            </li>
-
-            <li>
-                <a href="/t-listoftenant">
-                    <i class='bx bxs-group' ></i>
-                    <span class="link_name">List of Tenants</span>
-                </a>
-                <ul class="sub-menu blank">
-                    <li><a class ="link_name"href="/t-listoftenant">List of Tenants</a></li>
+                    <li><a href="/bill-reports">Tenant Bill</a></li>
+                    <li><a href="/payment-reports">Tenant Payment</a></li>
                 </ul>
             </li>
            

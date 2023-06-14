@@ -66,7 +66,6 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-dark btn-rounded">Generate</button>
                     <button type="button" class="btn btn-outline-dark btn-rounded">Save</button>
                 </div>
                 </form>
@@ -76,18 +75,40 @@
 
 <!-- Select Tenant Modal -->
 <div class="modal fade" id="selectModal" tabindex="-1" aria-labelledby="selectModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="editModalLabel">Select a Tenant</h5>
                 <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                
+                <div class="content-wrapper">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Fullname</th>
+                            <th scope="col">Contact Number</th>
+                            <th scope="col">Email Address</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Kim Taehyung</td>
+                            <td>09123456789</td>
+                            <td>kth@gmail.com</td>
+                            <td>
+                                <button type="button" class="btn btn-dark btn-rounded">Select</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-dark btn-rounded">Select</button>
             </div>
         </div>
         </div>
@@ -202,9 +223,15 @@
                         <button type="button" class="btn btn-primary" name="selectButton" id="selectButton" style="font-size: 16px; padding: 10px 30px;">Select</button>
                     </div>
 
+
                     <div class="mb-3 form-outline">
-                        <input type="text" class="form-control" name="selectedStallTextboxt" id="selectedStallTextboxt" readonly>
+                        <input type="text" class="form-control" name="selectedStall" id="selectedStall" readonly>
                         <label class="form-label" for="typeText">Selected Stall</label>
+                    </div>
+
+                    <div class="mb-3 form-outline">
+                        <input type="text" class="form-control" name="cusa" id="cusa" readonly>
+                        <label class="form-label" for="typeText">Cusa</label>
                     </div>
 
                     <div class="mb-3 form-outline">

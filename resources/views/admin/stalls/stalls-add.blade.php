@@ -10,7 +10,7 @@
                     <div class="card-body">
                         <div class="mb-3">
                             <label for="inputFloorNum" class="form-label">Floor Number</label>
-                            <select id="floornumber" name="floornumber" class="form-select">
+                            <select id="floornum" name="floornumb" class="form-select">
                                 <option selected>Choose Floor</option>
                                 <option>Lower Ground Floor</option>
                                 <option>Upper Ground Floor</option>
@@ -37,7 +37,7 @@
                             </select>
                         </div>
                         <div class="mb-3 form-outline">
-                            <input type="text" id="stallnumber" name="stallnumber" class="form-control" placeholder="Code-Stall#"/>
+                            <input type="text" id="stallnum" name="stallnum" class="form-control" placeholder="Code-Stall#"/>
                             <label class="form-label" for="form12">Stall Number</label>
                         </div>
                         <div class="text-center">

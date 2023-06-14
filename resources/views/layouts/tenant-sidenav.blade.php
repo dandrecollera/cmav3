@@ -285,7 +285,6 @@
                 <ul class="sub-menu">
                     <li><a class ="link_name"href="#">About</a></li>
                     <li><a href="/cma-staff">Staff</a></li>
-                    <li><a href="/cma-ifo">CMA Information</a></li>
                 </ul>
             </li>
 
