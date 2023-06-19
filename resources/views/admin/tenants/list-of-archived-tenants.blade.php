@@ -13,6 +13,7 @@
     </style>
   
   <div class="content-wrapper">
+    <div class="table-responsive">
     <table class="table">
         <caption>List of Archived Tenants</caption>
         <thead class="table-dark">
@@ -29,7 +30,7 @@
         <tbody>
             <tr>
                 <td>1</td>
-            <td><img src="/img/cma-admin1.png" style="width: 30px; height: 60px" class="rounded-circle"></td>
+            <td><img src="/img/cma-admin1.png" class="img-fluid rounded-circle" style="object-fit: cover;"></td>
             <td>Kim Taehyung</td>
             <td>09123456789</td>
             <td>kth@gmail.com</td>
@@ -38,4 +39,5 @@
             </tr>
         </tbody>
     </table>
+</div>
 @endsection

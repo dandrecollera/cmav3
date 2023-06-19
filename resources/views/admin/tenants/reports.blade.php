@@ -13,6 +13,7 @@
     </style>
   
   <div class="content-wrapper">
+    <div class="table-responsive">
     <table class="table">
         <caption>List of Reports</caption>
         <thead class="table-dark">
@@ -38,6 +39,7 @@
             </tr>
         </tbody>
     </table>
+  </div>
 
     <!-- View Modal -->
     <div class="modal fade" id="viewModal" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">

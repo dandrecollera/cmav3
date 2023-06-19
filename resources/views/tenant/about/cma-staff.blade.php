@@ -14,8 +14,8 @@
                             <img
                                 src="https://mdbootstrap.com/img/new/avatars/8.jpg"
                                 alt=""
-                                style="width: 45px; height: 45px"
-                                class="rounded-circle"
+                                style="object-fit: cover;"
+                                class="img-fluid rounded-circle"
                             />
                             <div class="ms-3">
                                 <p class="fw-bold mb-1">Maam amie</p>
@@ -34,8 +34,8 @@
                             <img
                                 src="https://mdbootstrap.com/img/new/avatars/6.jpg"
                                 alt=""
-                                style="width: 45px; height: 45px"
-                                class="rounded-circle"
+                                style="object-fit: cover;"
+                                class="img-fluid rounded-circle"
                             />
                             <div class="ms-3">
                                 <p class="fw-bold mb-1">Treasurer</p>
@@ -55,8 +55,8 @@
                             <img
                                 src="https://mdbootstrap.com/img/new/avatars/7.jpg"
                                 alt=""
-                                style="width: 45px; height: 45px"
-                                class="rounded-circle"
+                                style="object-fit: cover;"
+                                class="img-fluid rounded-circle"
                             />
                             <div class="ms-3">
                                 <p class="fw-bold mb-1">Atasha Biteranta</p>
@@ -75,8 +75,8 @@
                             <img
                                 src="https://mdbootstrap.com/img/new/avatars/3.jpg"
                                 alt=""
-                                style="width: 45px; height: 45px"
-                                class="rounded-circle"
+                                style="object-fit: cover;"
+                                class="img-fluid rounded-circle"
                             />
                             <div class="ms-3">
                                 <p class="fw-bold mb-1">Jemaima Letolio</p>
@@ -95,8 +95,8 @@
                             <img
                                 src="https://mdbootstrap.com/img/new/avatars/8.jpg"
                                 alt=""
-                                style="width: 45px; height: 45px"
-                                class="rounded-circle"
+                                style="object-fit: cover;"
+                                class="img-fluid rounded-circle"
                             />
                             <div class="ms-3">
                                 <p class="fw-bold mb-1">Franzene Lozada</p>
@@ -115,8 +115,8 @@
                             <img
                                 src="https://mdbootstrap.com/img/new/avatars/6.jpg"
                                 alt=""
-                                style="width: 45px; height: 45px"
-                                class="rounded-circle"
+                                style="object-fit: cover;"
+                                class="img-fluid rounded-circle"
                             />
                             <div class="ms-3">
                                 <p class="fw-bold mb-1">Stephanie Valdez</p>
