@@ -9,6 +9,7 @@
     <script src="js/mdb.min.js"></script>
     <link rel="stylesheet" href="/css/mdb.min.css">
 
+    
     <style>
         *{
             font-family: 'Poppins', 'sans-serif';
@@ -29,7 +30,6 @@
             border-radius: 10px;
             background: #fff;
             box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.2);
-
         }
         .side-image{
             background-image: url("/img/cma3.png");
@@ -37,22 +37,19 @@
             background-size: cover;
             background-repeat: no-repeat;
             position: relative;
-            border-radius: 10px 0 0 10px
-            
+            border-radius: 10px 0 0 10px;
         }
         img{
             width: 35px;
             position: absolute;
             top: 30px;
             left: 30px;
-
         }
         .text{
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-
         }
         .text p{
             color: #fff;
@@ -121,6 +118,22 @@
             color: #fff
         }
 
+        @media (max-width: 768px) {
+            .row {
+                width: 100%;
+                height: auto;
+                border-radius: 0;
+            }
+            .side-image {
+                display: none;
+            }
+            .right {
+                padding: 20px;
+            }
+            .input-box {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
