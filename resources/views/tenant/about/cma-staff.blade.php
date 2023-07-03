@@ -12,14 +12,14 @@
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="d-flex align-items-center">
                             <img
-                                src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+                                src="https://i.pinimg.com/originals/39/1e/e1/391ee12077ba9cabd10e476d8b8c022b.jpg"
                                 alt=""
                                 style="object-fit: cover;"
                                 class="img-fluid rounded-circle"
                             />
                             <div class="ms-3">
-                                <p class="fw-bold mb-1">Maam amie</p>
-                                <p class="text-muted mb-0">amie@gmail.com</p>
+                                <p class="fw-bold mb-1">Admin</p>
+                                <p class="text-muted mb-0">admin@gmail.com</p>
                             </div>
                         </div>
                     </div>
@@ -32,7 +32,7 @@
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="d-flex align-items-center">
                             <img
-                                src="https://mdbootstrap.com/img/new/avatars/6.jpg"
+                                src="https://i.pinimg.com/originals/39/1e/e1/391ee12077ba9cabd10e476d8b8c022b.jpg"
                                 alt=""
                                 style="object-fit: cover;"
                                 class="img-fluid rounded-circle"
@@ -53,7 +53,7 @@
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="d-flex align-items-center">
                             <img
-                                src="https://mdbootstrap.com/img/new/avatars/7.jpg"
+                                src="https://i.pinimg.com/originals/39/1e/e1/391ee12077ba9cabd10e476d8b8c022b.jpg"
                                 alt=""
                                 style="object-fit: cover;"
                                 class="img-fluid rounded-circle"
@@ -73,7 +73,7 @@
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="d-flex align-items-center">
                             <img
-                                src="https://mdbootstrap.com/img/new/avatars/3.jpg"
+                                src="https://i.pinimg.com/originals/39/1e/e1/391ee12077ba9cabd10e476d8b8c022b.jpg"
                                 alt=""
                                 style="object-fit: cover;"
                                 class="img-fluid rounded-circle"
@@ -93,7 +93,7 @@
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="d-flex align-items-center">
                             <img
-                                src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+                                src="https://i.pinimg.com/originals/39/1e/e1/391ee12077ba9cabd10e476d8b8c022b.jpg"
                                 alt=""
                                 style="object-fit: cover;"
                                 class="img-fluid rounded-circle"
@@ -113,7 +113,7 @@
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="d-flex align-items-center">
                             <img
-                                src="https://mdbootstrap.com/img/new/avatars/6.jpg"
+                                src="https://i.pinimg.com/originals/39/1e/e1/391ee12077ba9cabd10e476d8b8c022b.jpg"
                                 alt=""
                                 style="object-fit: cover;"
                                 class="img-fluid rounded-circle"
