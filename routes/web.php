@@ -58,8 +58,6 @@ Route::get('/apply', function () {
         return view('admin.applicants.listofapproved');
     });
 
-
-
     //area
     Route::get('/area-add', function () {
         return view('admin.area.area-add');
@@ -69,12 +67,9 @@ Route::get('/apply', function () {
     });
 
     //floors
-    Route::get('/floor-add', function () {
-        return view('admin.floors.floor-add');
-    });
-    Route::get('/floor-view', function () {
-        return view('admin.floors.floor-view');
-    });
+    Route::get('/floor-add', function () {return view('admin.floors.floor-add');});
+    Route::post('/addfloor', [App\Http\Controllers\FloorController::class, 'flooradd'])->name('flooradd');
+    Route::get('/floor-view', [App\Http\Controllers\FloorController::class, 'floorview'])->name('floorview');
 
     //homepage
     Route::get('/announcement', function () {
@@ -91,6 +86,7 @@ Route::get('/apply', function () {
     Route::get('/sections-add', function () {
         return view('admin.sections.sections-add');
     });
+    Route::post('/addsection', [App\Http\Controllers\SectionController::class, 'sectionadd'])->name('sectionadd');
     Route::get('/sections-view', function () {
         return view('admin.sections.sections-view');
     });
