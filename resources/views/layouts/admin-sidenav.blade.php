@@ -301,7 +301,7 @@
                 <ul class="sub-menu">
                     <li><a class ="link_name"href="#">Applicants</a></li>
                     <li><a href="/listofapplicants">List of Applicants</a></li>
-                    <li><a href="/listofapproved">List of Approved Applicants</a></li>
+                    <li><a href="/listofapproved">List of Approved <br>Applicants</a></li>
                 </ul>
             </li>
 
@@ -316,7 +316,7 @@
                 <ul class="sub-menu">
                     <li><a class ="link_name"href="#">Tenants</a></li>
                     <li><a href="/listoftenants">List of Tenant</a></li>
-                    <li><a href="/list-of-archived-tenants">List of Archived Tenants</a></li>
+                    <li><a href="/list-of-archived-tenants">List of Archived <br>Tenants</a></li>
                     <li><a href="/reports">Tenant Reports</a></li>
                     <li><a href="/rent">Rent</a></li>
                 </ul>
