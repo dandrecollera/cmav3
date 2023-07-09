@@ -29,7 +29,7 @@ Route::get('/treasury-sidenav', function () {
 
 //GUEST/PUBLIC
 
-Route::get('/home', function () {
+Route::get('/', function () {
     return view('publicview.home');
 });
 Route::get('/about', function () {
@@ -112,7 +112,7 @@ Route::get('/apply', function () {
     Route::get('/reports', function () {
         return view('admin.tenants.reports');
     });
-    
+
 
 
     //admin-account-settings
