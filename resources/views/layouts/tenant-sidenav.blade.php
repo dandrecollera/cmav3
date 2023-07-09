@@ -277,20 +277,6 @@
             <li>
                 <div class="icon-link">
                     <a href="#">
-                        <i class='bx bx-home' ></i>
-                        <span class="link_name">About</span>
-                    </a>
-                    <i class='bx bx-chevron-down arrow' ></i>
-                </div>
-                <ul class="sub-menu">
-                    <li><a class ="link_name"href="#">About</a></li>
-                    <li><a href="/cma-staff">Staff</a></li>
-                </ul>
-            </li>
-
-            <li>
-                <div class="icon-link">
-                    <a href="#">
                         <i class='bx bx-money'></i>
                         <span class="link_name">Transaction</span>
                     </a>
@@ -320,6 +306,20 @@
                 </a>
                 <ul class="sub-menu blank">
                     <li><a class ="link_name"href="/tenant-lostandfound">Lost and Found</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <div class="icon-link">
+                    <a href="#">
+                        <i class='bx bx-home' ></i>
+                        <span class="link_name">About</span>
+                    </a>
+                    <i class='bx bx-chevron-down arrow' ></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class ="link_name"href="#">About</a></li>
+                    <li><a href="/cma-staff">Staff</a></li>
                 </ul>
             </li>
 

@@ -22,18 +22,14 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Lower Ground Floor</td>
-                <td>Wet and Dry</td>
-            </tr>
-            <tr>
-                <td>Upper Ground Floor</td>
-                <td>Necessities</td>
-            </tr>
-            <tr>
-                <td>2nd Floor</td>
-                <td>Others</td>
-            </tr>
+            @if(isset($floor))
+                @foreach($floor as $floors)
+                    <tr>
+                        <td>{{ $floors->floornum }}</td>
+                        <td>{{ $floors->floordesc }}</td>
+                    </tr>
+                @endforeach
+            @endif
         </tbody>
     </table>
 </div>

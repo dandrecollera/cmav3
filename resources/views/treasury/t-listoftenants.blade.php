@@ -3,49 +3,51 @@
 @section('content')
 
 <div class="content-wrapper">
-    <table class="table">
-        <caption>List of Tenants</caption>
-        <thead class="table-dark">
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Image</th>
-                <th scope="col">Fullname</th>
-                <th scope="col">Contact Number</th>
-                <th scope="col">Email Address</th>
-                <th scope="col">Tenant Type</th>
-                <th scope="col">Stall Number</th>
-                <th scope="col">Action</th>
-                <th scope="col">
-                    <div class="btn-group" role="group">
-                        <button type="button" class="btn btn-outline-light btn-rounded" data-mdb-toggle="modal"
-                            data-mdb-target="#dailybillModal">Daily</button>
-                        <button type="button" class="btn btn-outline-light btn-rounded" data-mdb-toggle="modal"
-                            data-mdb-target="#monthlybillModal">Monthly</button>
-                    </div>
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td><img src="/img/cma-admin1.png" style="height: 60px" class="rounded-circle"></td>
-                <td>Kim Taehyung</td>
-                <td>09123456789</td>
-                <td>kth@gmail.com</td>
-                <td>Monthly</td>
-                <td>FGS-1</td>
-                <td>
-                    <div class="btn-group" role="group">
-                        <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-toggle="modal"
-                            data-mdb-target="#billModal">Bill</button>
-                        <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-toggle="modal"
-                            data-mdb-target="#viewModal">View</button>
-                    </div>
-                </td>
+    <div class="table-responsive">
+        <table class="table">
+            <caption>List of Tenants</caption>
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Fullname</th>
+                    <th scope="col">Contact Number</th>
+                    <th scope="col">Email Address</th>
+                    <th scope="col">Tenant Type</th>
+                    <th scope="col">Stall Number</th>
+                    <th scope="col">Action</th>
+                    <th scope="col">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-outline-light btn-rounded" data-mdb-toggle="modal"
+                                data-mdb-target="#dailybillModal">Daily</button>
+                            <button type="button" class="btn btn-outline-light btn-rounded" data-mdb-toggle="modal"
+                                data-mdb-target="#monthlybillModal">Monthly</button>
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><img src="/img/cma-admin1.png" class="img-fluid rounded-circle" style="object-fit: cover;"></td>
+                    <td>Kim Taehyung</td>
+                    <td>09123456789</td>
+                    <td>kth@gmail.com</td>
+                    <td>Monthly</td>
+                    <td>FGS-1</td>
+                    <td>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-toggle="modal"
+                                data-mdb-target="#billModal">Bill</button>
+                            <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-toggle="modal"
+                                data-mdb-target="#viewModal">View</button>
+                        </div>
+                    </td>
 
-            </tr>
-        </tbody>
-    </table>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
     <!-- daily Modal -->
     <div class="modal fade" id="dailybillModal" tabindex="-1" aria-labelledby="dailybillLabel" aria-hidden="true">

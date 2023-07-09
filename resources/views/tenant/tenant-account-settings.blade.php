@@ -4,26 +4,21 @@
 
 
 
-    <style type="text/css">
-        .photo2b2{
-            max-width: 200px;
-            min-height: 200px;
-            object-fit:cover;
-            border-radius: 10px;
-        }
+<style>
+    .square-image {
+      width: 150px; /* Set the desired width of the square */
+      height: 150px; /* Set the desired height of the square */
+      object-fit: cover; /* Maintain aspect ratio and fill the container */
+      object-position: center; /* Center the image within the container */
+      border-radius: 10%; /* Make the image circular */
+    }
     </style>
-
 <div class="content-wrapper">
 <div class="row p-4">
     <div class="col-6">
             <h5>Tenant Information</h5>
             <div class="mb-3 d-flex flex-column align-items-center">
-                <img src="/img/cma-admin1.png" class="photo2b2">
-            </div>
-
-            <div class="mb-3 form-outline">
-                <input class="form-control" id="fullname" name="fullname" readonly/>
-                <label class="form-label" for="typeText">Fullname</label>
+                <img src="https://i.pinimg.com/originals/39/1e/e1/391ee12077ba9cabd10e476d8b8c022b.jpg" class="img-fluid square-image">
             </div>
 
             <div class="mb-3 form-outline">

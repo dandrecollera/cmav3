@@ -3,6 +3,7 @@
 @section('content')
 
 <div class="content-wrapper">
+<div class="table-responsive">
 <table class="table">
     <caption>List of Applicants</caption>
     <thead class="table-dark">
@@ -21,7 +22,7 @@
         <tr>
             <td>1</td>
             <td>0001</td>
-            <td><img src="/img/cma-admin1.png" style="width: 20px; height: 60px" class="rounded-circle"></td>
+            <td><img src="/img/cma-admin1.png" class="img-fluid rounded-circle" style="object-fit: cover;"></td>
             <td>Kim Taehyung</td>
             <td>12/30/1995</td>
             <td>09123456789</td>
@@ -36,6 +37,7 @@
         </tr>
     </tbody>
 </table>
+</div>
 
 <!-- view Modal -->
 <div class="modal fade" id="viewModal" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
