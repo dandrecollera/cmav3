@@ -13,7 +13,7 @@ class ApplicantController extends Controller
     {
 
         // check if required forms has inputs
-        if(empty($input['firstname'])){
+        if(!empty($input['firstname'])){
             return redirect('/apply?err=1');
             die();
         }
@@ -63,6 +63,9 @@ class ApplicantController extends Controller
             'emailadd' => $request->input('emailadd'),
             'contactno' => $request->input('contactno'),
         ]);
+
+        // redirect to a success page
+        return redirect('/apply');
     }
 
     public function applicantPage(Request $request)
