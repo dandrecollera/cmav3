@@ -11,17 +11,6 @@ class ApplicantController extends Controller
 {
     public function applicant(Request $request)
     {
-        //  gather all the inputs as $input
-        DB::table('applicant')->insert([
-            'firstname' => $request->input('firstname'),
-            'middlename' => $request->input('middlename'),
-            'lastname' => $request->input('lastname'),
-            'address' => $request->input('address'),
-            'birthday' => $request->input('birthday'),
-            'emailadd' => $request->input('emailadd'),
-            'contactno' => $request->input('contactno'),
-            
-        ]);
 
         // check if required forms has inputs
         if(empty($input['firstname'])){
@@ -64,7 +53,16 @@ class ApplicantController extends Controller
             $requirements = $filename;
         }
 
-        
+        //  gather all the inputs as $input
+        DB::table('applicant')->insert([
+            'firstname' => $request->input('firstname'),
+            'middlename' => $request->input('middlename'),
+            'lastname' => $request->input('lastname'),
+            'address' => $request->input('address'),
+            'birthday' => $request->input('birthday'),
+            'emailadd' => $request->input('emailadd'),
+            'contactno' => $request->input('contactno'),
+        ]);
     }
 
     public function applicantPage(Request $request)
