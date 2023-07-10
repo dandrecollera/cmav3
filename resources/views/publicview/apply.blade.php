@@ -194,103 +194,85 @@ nav .fa{
     </div>
     </section>
 <section>
-    <form class="was-validated">
-      <div class="container p-5">
-          <div class="row justify-content-center">
-              <div class="col-lg-6">
-                  <div class="card">
-                      <div class="card-body">
-                          <div class="mb-3">
-                              <h3>Applicant's Information</h3>
-                          </div>
+    <form action="/application" method="POST" enctype="multipart/form-data" class="was-validated">
+    @csrf
+        <div class="container p-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <h3>Applicant's Information</h3>
+                            </div>
+                                {{--<div class="mb-3 form-outline">
+                                    <input class="form-control" id="applicantno" name="applicantno" readonly/>
+                                    <label class="form-label" for="typeText">Applicant No.</label>
+                                </div>--}}
 
-                          <div class="mb-3 form-outline">
-                              <input class="form-control" id="applicantno" name="applicantno" readonly/>
-                              <label class="form-label" for="typeText">Applicant No.</label>
-                          </div>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control is-valid" id="firstname" name="firstname" placeholder="First Name" aria-label="First Name" required/>
+                                    <input type="text" class="form-control is-valid" id="middlename" name="middlename" placeholder="Middle Name" aria-label="Middle Name"/>
+                                    <input type="text" class="form-control is-valid" id="lastname" name="lastname" placeholder="Last Name" aria-label="Last Name" required/>
+                                </div>
+        
+                                <div class="mb-3 form-outline">
+                                    <textarea class="form-control is-valid" id="address" name="address" required rows="2"></textarea>
+                                    <label class="form-label" for="typeText">Address</label>
+                                </div>
 
-                          <div class="mb-3 form-outline">
-                              <input class="form-control is-valid" id="fullname" name="fullname" required/>
-                              <label class="form-label" for="typeText">Fullname</label>
-                          </div>
-  
-                          <div class="mb-3 form-outline">
-                              <textarea class="form-control is-valid" id="address" name="address" required rows="2"></textarea>
-                              <label class="form-label" for="typeText">Address</label>
-                          </div>
+                                <div class="mb-3 form-outline">
+                                    <input class="form-control is-valid" type="date" id="birthday" name="birthday" required/>
+                                    <label class="form-label" for="typeText">Birthday</label>
+                                </div>
 
-                          <div class="mb-3 form-outline">
-                              <input class="form-control is-valid" type="date" id="birthday" name="birthday" required/>
-                              <label class="form-label" for="typeText">Birthday</label>
-                          </div>
+                                <div class="mb-3 form-outline">
+                                    <input class="form-control is-valid" id="emailadd" name="emailadd" required/>
+                                    <label class="form-label" for="typeText">Email Address</label>
+                                </div>
 
-                          <div class="mb-3 form-outline">
-                              <input class="form-control is-valid" id="emailadd" name="emailadd" required/>
-                              <label class="form-label" for="typeText">Email Address</label>
-                          </div>
+                                <div class="mb-3 form-outline">
+                                    <input id="contactno" name="contactno" class="form-control is-valid" data-mdb-showcounter="true" maxlength="11" required />
+                                    <label class="form-label" for="form16">Contact No.</label>
+                                    <div class="form-helper mt-1"></div>
+                                </div>
 
-                          <div class="mb-3 form-outline">
-                              <input id="contactnum" name="contactnum" class="form-control is-valid" data-mdb-showcounter="true" maxlength="11" required />
-                              <label class="form-label" for="form16">Contact No.</label>
-                              <div class="form-helper mt-1"></div>
-                          </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="form16">Upload Picture (2x2)</label>
+                                    <input type="file" class="form-control" name="image" id="image" required/>
+                                </div>
 
-                          <div class="mb-3">
-                              <label class="form-label" for="form16">Upload Picture (2x2)</label>
-                              <input type="file" class="form-control" name="image" id="image" required/>
-                          </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="form16">Upload all Requirements(in PDF form)</label>
+                                    <input type="file" class="form-control" name="requirements" id="requirements" required/>
+                                </div>
 
-                          <div class="mb-3">
-                              <label class="form-label" for="form16">Upload all Requirements(in PDF form)</label>
-                              <input type="file" class="form-control" name="req" id="req" required/>
-                          </div>
-
-                          <div class="mb-3">
-                              <button class="btn btn-dark btn-rounded" data-mdb-target="#submitModal" data-mdb-toggle="modal" data-mdb-dismiss="modal">
-                                  Submit
-                                </button>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </form>
+                                <div class="mb-3">
+                                    <button type="submit" class="btn btn-dark btn-rounded"> Submit </button>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
 </section>
 
-  <div class="modal fade" id="submitModal" aria-hidden="true" aria-labelledby="submitModalToggleLabel22" tabindex="-1">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalToggleLabel22">Schedule</h5>
-            <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-              Kindly check your email.
-          </div>
-          <div class="modal-footer">
-              <button type="button" class="btn btn-dark btn-rounded" data-mdb-dismiss="modal">Okay</button>
-          </div>
-        </div>
-      </div>
-    </div>
+        <section class="footer">
+            <p>City Mall of Antipolo</p>
+        </section>
 
-    <section class="footer">
-        <p>City Mall of Antipolo</p>
-    </section>
+    <script src="js/mdb.min.js"></script>
 
-  <script src="js/mdb.min.js"></script>
-
-      <script>
-        function showMenu() {
-          var navLinks = document.getElementById("navLinks");
-          navLinks.style.right = "0";
-        }
-    
-        function hideMenu() {
-          var navLinks = document.getElementById("navLinks");
-          navLinks.style.right = "-210px";
-        }
-      </script>
+        <script>
+            function showMenu() {
+            var navLinks = document.getElementById("navLinks");
+            navLinks.style.right = "0";
+            }
+        
+            function hideMenu() {
+            var navLinks = document.getElementById("navLinks");
+            navLinks.style.right = "-210px";
+            }
+        </script>
 </body>
 </html>

@@ -15,14 +15,15 @@ class CreateApplicantTable extends Migration
     {
         Schema::create('applicant', function (Blueprint $table) {
             $table->id();
-            $table->string('applicantno');
-            $table->string('fullname');
+            $table->string('firstname');
+            $table->string('middlename')->nullable();
+            $table->string('lastname');
             $table->string('address');
             $table->string('birthday');
             $table->string('emailadd');
             $table->string('contactno');
-            $table->mediumText('image')->nullable();
-            $table->mediumText('req')->nullable();
+            $table->string('image')->default('blank.jpg');
+            $table->string('requirements')->nullable();
             $table->timestamps();
         });
     }
