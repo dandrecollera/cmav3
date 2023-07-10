@@ -41,6 +41,7 @@ Route::get('/availablestalls', function () {
 Route::get('/apply', function () {
     return view('publicview.apply');
 });
+Route::post('/application', [App\Http\Controllers\ApplicantController::class, 'applicant'])->name('applicant');
 
 
 
@@ -67,7 +68,9 @@ Route::get('/apply', function () {
     });
 
     //floors
-    Route::get('/floor-add', function () {return view('admin.floors.floor-add');});
+    Route::get('/floor-add', function () {
+        return view('admin.floors.floor-add');
+    });
     Route::post('/addfloor', [App\Http\Controllers\FloorController::class, 'flooradd'])->name('flooradd');
     Route::get('/floor-view', [App\Http\Controllers\FloorController::class, 'floorview'])->name('floorview');
 
