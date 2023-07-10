@@ -39,7 +39,7 @@ Route::get('/availablestalls', function () {
     return view('publicview.availablestalls');
 });
 Route::get('/apply', [App\Http\Controllers\ApplicantController::class, 'applicantPage'])->name('applicant');
-Route::post('/application', [App\Http\Controllers\ApplicantController::class, 'applicant'])->name('applicant');
+Route::post('/application', [App\Http\Controllers\ApplicantController::class, 'applicant'])->name('application');
 
 
 
