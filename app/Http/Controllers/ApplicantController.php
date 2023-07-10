@@ -12,7 +12,13 @@ class ApplicantController extends Controller
     public function applicant(Request $request)
     {
         //  gather all the inputs as $input
-        $input = $request->input();
+        $firstname = $request->input('firstname');
+        $middlename = $request->input('middlename');
+        $lastname = $request->input('lastname');
+        $address = $request->input('address');
+        $birthday = $request->input('birthday');
+        $emailadd = $request->input('emailadd');
+        $contactno = $request->input('contactno');
 
         // check if required forms has inputs
         if(empty($input['firstname'])){
@@ -44,6 +50,18 @@ class ApplicantController extends Controller
             $path = $request->file('image')->storeAs($destinationPath, $filename);
             $photo = $filename;
         }
+        
+        // saving file to storage
+        if($request->hasFile('requirements')){
+            $destinationPath = 'public/applicantsRequirments';
+            $requirements = $request->file('requirements');
+            $extension = $requirements->getClientOriginalExtension();
+            $filename = $lastnum . '.' . $extension;
+            $path = $request->file('requirements')->storeAs($destinationPath, $filename);
+            $requirements = $filename;
+        }
+
+        
     }
 
     public function applicantPage(Request $request)
