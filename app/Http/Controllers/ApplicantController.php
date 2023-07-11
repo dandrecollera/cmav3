@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
-use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Collection;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 
 class ApplicantController extends Controller
@@ -13,23 +16,24 @@ class ApplicantController extends Controller
     {
         
         //  gather all the inputs as $input
-        $input = $request->input()
+        $input = $request->input();
 
         // check if required forms has inputs
         if (empty($input['firstname']) || empty($input['lastname']) || empty($input['address']) || empty($input['birthday']) || empty($input['emailadd']) || empty($input['contactno']) ) {
             return redirect('/apply?err=1');
             die();
         }
+
         //  checks if image is more that 2mb
         $maxSize = 2 * 1024 * 1024;
         if($request->hasFile('image')){
             $size = $request->file('image')->getSize();
+            dd($size);
             if($size > $maxSize){
                 return redirect('/apply?err=4');
                 die();
             }
-        }
-
+        
         // get the last id, if no data yet, set the id to 1, else increment the last id
         $lastnum = DB::table('applicant')->max('id');
         $newId = $lastnum ? $lastnum + 1  : 1;
@@ -40,18 +44,18 @@ class ApplicantController extends Controller
             $destinationPath = 'public/applicantsImage';
             $image = $request->file('image');
             $extension = $image->getClientOriginalExtension();
-            $filename = $lastnum . '.' . $extension;
+            $filename = $newId . '.' . $extension;
             $path = $request->file('image')->storeAs($destinationPath, $filename);
             $photo = $filename;
         }
         
         // saving file to storage
-        $file = 'blank.pdf'
+        $file = 'blank.pdf';
         if($request->hasFile('requirements')){
             $destinationPath = 'public/applicantsRequirments';
             $requirements = $request->file('requirements');
             $extension = $requirements->getClientOriginalExtension();
-            $filename = $lastnum . '.' . $extension;
+            $filename = $newId . '.' . $extension;
             $path = $request->file('requirements')->storeAs($destinationPath, $filename);
             $file = $filename;
         }
@@ -64,8 +68,8 @@ class ApplicantController extends Controller
             'birthday' => $request->input('birthday'),
             'emailadd' => $request->input('emailadd'),
             'contactno' => $request->input('contactno'),
-            'image' => $photo
-            'requirements' => $file
+            'image' => $photo,
+            'requirements' => $file,
             'created_at' => Carbon::now()->toDateTimeString(),
             'updated_at' => Carbon::now()->toDateTimeString(),
         ]);
