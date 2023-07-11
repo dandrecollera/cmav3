@@ -24,7 +24,6 @@ class ApplicantController extends Controller
 
         //  checks if image is more that 2mb
         $maxSize = 2 * 1024 * 1024;
-        dd('test');
         if($request->hasFile('image')){
             $size = $request->file('image')->getSize();
             if($size > $maxSize){
