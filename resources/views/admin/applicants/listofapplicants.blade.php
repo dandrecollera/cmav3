@@ -8,32 +8,32 @@
     <caption>List of Applicants</caption>
     <thead class="table-dark">
         <tr>
-            <th scope="col">ID</th>
             <th scope="col">Applicant No.</th>
             <th scope="col">Image</th>
             <th scope="col">Fullname</th>
-            <th scope="col">Birthday</th>
             <th scope="col">Contact Number</th>
             <th scope="col">Email Address</th>
             <th scope="col">Action</th>
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>1</td>
-            <td>0001</td>
-            <td><img src="/img/cma-admin1.png" class="img-fluid rounded-circle" style="object-fit: cover;"></td>
-            <td>Kim Taehyung</td>
-            <td>12/30/1995</td>
-            <td>09123456789</td>
-            <td>kth@gmail.com</td>
-            <td>
-                <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-toggle="modal"
-                    data-mdb-target="#viewModal">View</button>
-                    <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-toggle="modal"
-                    data-mdb-target="#approveModal">Approve</button>
-            </td>
-
+        @if(isset($apply))
+                @foreach($apply as $app)
+                    <tr>
+                        <td>{{ $app->id }}</td>
+                        <td><img src="{{ asset('storage/applicantsImage/' . $app->image) }}" class="rounded"></td>
+                        <td>{{ $app->firstname . ' ' . $app->lastname }}</td>
+                        <td>{{ $app->contactno }}</td>
+                        <td>{{ $app->emailadd }}</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-toggle="modal"
+                                data-mdb-target="#viewModal">View</button>
+                            <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-toggle="modal"
+                                data-mdb-target="#approveModal">Approve</button>
+                        </td>
+                    </tr>
+                @endforeach
+            @endif
         </tr>
     </tbody>
 </table>
@@ -103,13 +103,17 @@
                 <h5 class="modal-title" id="exampleModalLabel">Applicant</h5>
                 <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
             </div>
+            <form action="/approve" method="post" enctype="multipart/form-data">
+            @csrf
             <div class="modal-body">
+                <input type="hidden" name='id' value="{{ $app->id }}">
                 <h5>Do you really want to approve this applicant?</h5>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-dark btn-rounded">Yes</button>
+                <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-dark btn-rounded approve-button">Yes</button>
             </div>
+            </form>
         </div>
     </div>
 </div>

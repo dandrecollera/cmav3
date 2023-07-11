@@ -24,6 +24,7 @@ class CreateApplicantTable extends Migration
             $table->string('contactno');
             $table->string('image')->default('blank.jpg');
             $table->string('requirements')->nullable();
+            $table->integer('is_approved')->default(0);
             $table->timestamps();
         });
     }

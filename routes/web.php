@@ -50,9 +50,8 @@ Route::post('/application', [App\Http\Controllers\ApplicantController::class, 'a
         return view('admin.admin-dashboard');
     });
     //applicants
-    Route::get('/listofapplicants', function () {
-        return view('admin.applicants.listofapplicants');
-    });
+    Route::get('/listofapplicants', [App\Http\Controllers\ApplicantController::class, 'listofapplicants'])->name('listofapplicants');
+    Route::post('/approve', [App\Http\Controllers\ApplicantController::class, 'approve'])->name('approveapplicant');
     Route::get('/listofapproved', function () {
         return view('admin.applicants.listofapproved');
     });

@@ -24,7 +24,6 @@ class ApplicantController extends Controller
 
         //  checks if image is more that 2mb
         $maxSize = 2 * 1024 * 1024;
-        dd('test');
         if($request->hasFile('image')){
             $size = $request->file('image')->getSize();
             if($size > $maxSize){
@@ -93,5 +92,23 @@ class ApplicantController extends Controller
         }
 
         return view('publicview.apply', $data);
+    }
+
+    public function listofapplicants()
+    {
+        $apply = DB::table('applicant')
+            ->select('id','image','firstname', 'lastname','birthday','contactno','emailadd')
+            ->get();
+
+        return view('admin.applicants.listofapplicants', compact('apply'));
+    }
+
+    public function approve(Request $request) {
+        $id = $request->input('id');
+
+        $result = DB::table('applicant')->find($id);
+        $result->is_approved = 1;
+        
+        return Redirect::back()->with('message','Applicant approved!');
     }
 }
