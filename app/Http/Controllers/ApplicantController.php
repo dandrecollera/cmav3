@@ -2,18 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Applicant;
 use Illuminate\Support\Facades\DB;
-use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Collection;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 
 class ApplicantController extends Controller
 {
-    public function applicant(Request $request)
-    {
+    public function applicant(Request $request){
+        //  gather all the inputs as $input
+        $input = $request->input();
 
         // check if required forms has inputs
-        if(empty($input['firstname'])){
+        if (empty($input['firstname']) || empty($input['lastname']) || empty($input['address']) || empty($input['birthday']) || empty($input['emailadd']) || empty($input['contactno']) ) {
             return redirect('/apply?err=1');
             die();
         }
@@ -38,22 +42,22 @@ class ApplicantController extends Controller
             $destinationPath = 'public/applicantsImage';
             $image = $request->file('image');
             $extension = $image->getClientOriginalExtension();
-            $filename = $lastnum . '.' . $extension;
+            $filename = $newId . '.' . $extension;
             $path = $request->file('image')->storeAs($destinationPath, $filename);
             $photo = $filename;
         }
-        
+
         // saving file to storage
+        $file = 'blank.pdf';
         if($request->hasFile('requirements')){
             $destinationPath = 'public/applicantsRequirments';
             $requirements = $request->file('requirements');
             $extension = $requirements->getClientOriginalExtension();
-            $filename = $lastnum . '.' . $extension;
+            $filename = $newId . '.' . $extension;
             $path = $request->file('requirements')->storeAs($destinationPath, $filename);
-            $requirements = $filename;
+            $file = $filename;
         }
 
-        //  gather all the inputs as $input
         DB::table('applicant')->insert([
             'firstname' => $request->input('firstname'),
             'middlename' => $request->input('middlename'),
@@ -62,8 +66,16 @@ class ApplicantController extends Controller
             'birthday' => $request->input('birthday'),
             'emailadd' => $request->input('emailadd'),
             'contactno' => $request->input('contactno'),
+            'image' => $photo,
+            'requirements' => $file,
+            'created_at' => Carbon::now()->toDateTimeString(),
+            'updated_at' => Carbon::now()->toDateTimeString(),
         ]);
+
+        // redirect to a success page
+        return redirect('/apply');
     }
+
 
     public function applicantPage(Request $request)
     {
@@ -79,6 +91,6 @@ class ApplicantController extends Controller
             $data['err'] = $request->input('err');
         }
 
-    return view('publicview.apply', $data);
+        return view('publicview.apply', $data);
     }
 }
