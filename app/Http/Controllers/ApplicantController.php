@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Applicant;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -11,13 +11,15 @@ class ApplicantController extends Controller
 {
     public function applicant(Request $request)
     {
+        
+        //  gather all the inputs as $input
+        $input = $request->input()
 
         // check if required forms has inputs
-        if(!empty($input['firstname'])){
+        if (empty($input['firstname']) || empty($input['lastname']) || empty($input['address']) || empty($input['birthday']) || empty($input['emailadd']) || empty($input['contactno']) ) {
             return redirect('/apply?err=1');
             die();
         }
-
         //  checks if image is more that 2mb
         $maxSize = 2 * 1024 * 1024;
         if($request->hasFile('image')){
@@ -44,16 +46,16 @@ class ApplicantController extends Controller
         }
         
         // saving file to storage
+        $file = 'blank.pdf'
         if($request->hasFile('requirements')){
             $destinationPath = 'public/applicantsRequirments';
             $requirements = $request->file('requirements');
             $extension = $requirements->getClientOriginalExtension();
             $filename = $lastnum . '.' . $extension;
             $path = $request->file('requirements')->storeAs($destinationPath, $filename);
-            $requirements = $filename;
+            $file = $filename;
         }
 
-        //  gather all the inputs as $input
         DB::table('applicant')->insert([
             'firstname' => $request->input('firstname'),
             'middlename' => $request->input('middlename'),
@@ -62,6 +64,10 @@ class ApplicantController extends Controller
             'birthday' => $request->input('birthday'),
             'emailadd' => $request->input('emailadd'),
             'contactno' => $request->input('contactno'),
+            'image' => $photo
+            'requirements' => $file
+            'created_at' => Carbon::now()->toDateTimeString(),
+            'updated_at' => Carbon::now()->toDateTimeString(),
         ]);
 
         // redirect to a success page
