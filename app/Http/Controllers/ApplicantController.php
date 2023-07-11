@@ -12,9 +12,7 @@ use Illuminate\Http\Request;
 
 class ApplicantController extends Controller
 {
-    public function applicant(Request $request)
-    {
-        
+    public function applicant(Request $request){
         //  gather all the inputs as $input
         $input = $request->input();
 
@@ -28,12 +26,12 @@ class ApplicantController extends Controller
         $maxSize = 2 * 1024 * 1024;
         if($request->hasFile('image')){
             $size = $request->file('image')->getSize();
-            dd($size);
             if($size > $maxSize){
                 return redirect('/apply?err=4');
                 die();
             }
-        
+        }
+
         // get the last id, if no data yet, set the id to 1, else increment the last id
         $lastnum = DB::table('applicant')->max('id');
         $newId = $lastnum ? $lastnum + 1  : 1;
@@ -48,7 +46,7 @@ class ApplicantController extends Controller
             $path = $request->file('image')->storeAs($destinationPath, $filename);
             $photo = $filename;
         }
-        
+
         // saving file to storage
         $file = 'blank.pdf';
         if($request->hasFile('requirements')){
@@ -78,6 +76,7 @@ class ApplicantController extends Controller
         return redirect('/apply');
     }
 
+
     public function applicantPage(Request $request)
     {
         $data = array();
@@ -92,6 +91,6 @@ class ApplicantController extends Controller
             $data['err'] = $request->input('err');
         }
 
-    return view('publicview.apply', $data);
+        return view('publicview.apply', $data);
     }
 }
