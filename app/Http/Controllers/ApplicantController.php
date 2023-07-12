@@ -93,4 +93,28 @@ class ApplicantController extends Controller
 
         return view('publicview.apply', $data);
     }
+
+    public function listofapplicants()
+    {
+        $data = array();
+
+        $data['apply'] = DB::table('applicant')
+            ->select('id','image','firstname', 'lastname','birthday','contactno','emailadd', 'address','requirements')
+            ->get();
+
+        return view('admin.applicants.listofapplicants', $data);
+    }
+
+    public function approve(Request $request)
+    {
+        $id = $request->input('id');
+
+        DB::table('applicant')
+            ->where('id', $id)
+            ->update([
+                'is_approved' => "1",
+            ]);
+
+        return redirect('/listofapplicants');
+    }
 }

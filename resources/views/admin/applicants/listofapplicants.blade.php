@@ -8,32 +8,32 @@
     <caption>List of Applicants</caption>
     <thead class="table-dark">
         <tr>
-            <th scope="col">ID</th>
             <th scope="col">Applicant No.</th>
             <th scope="col">Image</th>
             <th scope="col">Fullname</th>
-            <th scope="col">Birthday</th>
             <th scope="col">Contact Number</th>
             <th scope="col">Email Address</th>
             <th scope="col">Action</th>
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>1</td>
-            <td>0001</td>
-            <td><img src="/img/cma-admin1.png" class="img-fluid rounded-circle" style="object-fit: cover;"></td>
-            <td>Kim Taehyung</td>
-            <td>12/30/1995</td>
-            <td>09123456789</td>
-            <td>kth@gmail.com</td>
-            <td>
-                <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-toggle="modal"
-                    data-mdb-target="#viewModal">View</button>
-                    <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-toggle="modal"
-                    data-mdb-target="#approveModal">Approve</button>
-            </td>
-
+        @if(isset($apply))
+                @foreach($apply as $app)
+                    <tr>
+                        <td>{{ $app->id }}</td>
+                        <td><img src="{{ asset('storage/applicantsImage/' . $app->image) }}" class="img-fluid rounded-circle" style="object-fit: cover; height: 75px;"></td>
+                        <td>{{ $app->firstname . ' ' . $app->lastname }}</td>
+                        <td>{{ $app->contactno }}</td>
+                        <td>{{ $app->emailadd }}</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-toggle="modal"
+                                data-mdb-target="#viewModal" data-appid="{{ $app->id }}">View</button>
+                            <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-toggle="modal"
+                                data-mdb-target="#approveModal" data-appid="{{ $app->id }}">Approve</button>
+                        </td>
+                    </tr>
+                @endforeach
+            @endif
         </tr>
     </tbody>
 </table>
@@ -49,41 +49,41 @@
             </div>
             <div class="modal-body">
                 <div class="mb-3 d-flex flex-column align-items-center">
-                    <img src="/img/cma-admin1.png" class="photo2b2">
+                    <img src="{{ asset('storage/applicantsImage/' . $app->image) }}" class="img-fluid rounded" style="object-fit: cover; height: 150px; width:150px;">
                 </div>
 
                 <div class="mb-3 form-outline">
-                    <input class="form-control" id="fullname" name="fullname" readonly />
+                    <input class="form-control" id="id" name="id" value="{{ $app->id }}" readonly />
                     <label class="form-label" for="typeText">Applicant No.</label>
                 </div>
 
                 <div class="mb-3 form-outline">
-                    <input class="form-control" id="fullname" name="fullname" readonly />
+                    <input class="form-control" id="fullname" name="fullname" value="{{ $app->firstname . ' ' . $app->lastname }}" readonly />
                     <label class="form-label" for="typeText">Fullname</label>
                 </div>
 
                 <div class="mb-3 form-outline">
-                    <textarea class="form-control" id="address" name="address" rows="2" readonly></textarea>
+                    <textarea class="form-control" id="address" name="address" rows="2" readonly>{{ $app->address }}</textarea>
                     <label class="form-label" for="typeText">Address</label>
                 </div>
 
                 <div class="mb-3 form-outline">
-                    <input class="form-control" type="text" id="birthday" name="birthday" readonly />
+                    <input class="form-control" type="text" id="birthday" name="birthday" value="{{ DateTime::createFromFormat('Y-m-d', $app->birthday)->format('F d, Y') }}" readonly />
                     <label class="form-label" for="typeText">Birthday</label>
                 </div>
 
                 <div class="mb-3 form-outline">
-                    <input id="contactnum" name="contactnum" class="form-control" readonly />
+                    <input id="contactnum" name="contactnum" class="form-control" value="{{ $app->contactno }}"readonly />
                     <label class="form-label" for="form16">Contact No.</label>
                 </div>
 
                 <div class="mb-3 form-outline">
-                    <input id="contactnum" name="contactnum" class="form-control" readonly />
+                    <input id="emailadd" name="emailadd" class="form-control" value="{{ $app->emailadd }}" readonly />
                     <label class="form-label" for="form16">Email Address</label>
                 </div>
 
                 <div class="mb-3">
-                    <p1>pdf ng requirements</p1>
+                    <a href="{{ asset('storage/applicantsRequirments/' . $app->requirements) }}" target="_blank">View Requirement</a>
                 </div>
 
             </div>
@@ -107,11 +107,31 @@
                 <h5>Do you really want to approve this applicant?</h5>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-dark btn-rounded">Yes</button>
+                <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-dark btn-rounded btn-approve" id="confirmApprove">Confirm</button>
             </div>
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    $(document).on('show.bs.modal', '#viewModal', function (event) {
+        var button = $(event.relatedTarget);
+        var applicantId = button.data('appid');
+        var modal = $(this);
+        var modalBody = modal.find('.modal-body');
+        
+        // Clear previous content
+        modalBody.empty();
+    });
+    $('.btn-approve').on('click', function() {
+    console.log('approve button clicked!');
+    console.log( $(this).data("appiid") );
+    var iid = $(this).data("appid");
+    console.log(iid);
+    // Redirect to the approve route with the id parameter
+    $('#confirmApprove').prop('href', '/approve?id='+ iid);
+});
+</script>
 
 @endsection

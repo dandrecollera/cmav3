@@ -23,7 +23,7 @@
         </thead>
         <tbody>
             <tr>
-                <td>Report No. 000001</td>
+                <td>1</td>
                 <td>05/25/2023</td>
                 <td>Sira ang ilaw</td>
                 <td>Lower Ground Floor</td>
@@ -44,10 +44,7 @@
               <h5 class="modal-title" id="exampleModalLabel">Add a Report</h5>
               <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
             </div>
-                <div class="modal-body"><div class="mb-3 form-outline">
-                  <input class="form-control" id="reportnum" name="reportnum" readonly/>
-                  <label class="form-label" for="description">Report Number</label>
-                </div>
+                <div class="modal-body">
                 <div class="mb-3 form-outline">
                     <input type="date" id="date" name="date" class="form-control"/>
                     <label class="form-label" for="form12">Date</label>
@@ -78,31 +75,4 @@
         </div>
       </div>
     </div>
-
-      <!-- Edit Item Modal
-      <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="editModalLabel">Edit Announcement</h5>
-              <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="mb-3 form-outline">
-                    <input type="date" id="date" name="date" class="form-control"/>
-                    <label class="form-label" for="form12">Date</label>
-                </div>
-                <div class="mb-3 form-outline">
-                    <textarea class="form-control" id="event" name="event" rows="3"></textarea>
-                    <label class="form-label" for="description">Event</label>
-                </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-dark btn-rounded">Save changes</button>
-            </div>
-          </div>
-        </div>
-      </div>-->
-
 @endsection
