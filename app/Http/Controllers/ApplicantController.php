@@ -96,19 +96,25 @@ class ApplicantController extends Controller
 
     public function listofapplicants()
     {
-        $apply = DB::table('applicant')
+        $data = array();
+
+        $data['apply'] = DB::table('applicant')
             ->select('id','image','firstname', 'lastname','birthday','contactno','emailadd')
             ->get();
 
-        return view('admin.applicants.listofapplicants', compact('apply'));
+        return view('admin.applicants.listofapplicants', $data);
     }
 
-    public function approve(Request $request) {
+    public function approve(Request $request)
+    {
         $id = $request->input('id');
 
-        $result = DB::table('applicant')->find($id);
-        $result->is_approved = 1;
-        
-        return Redirect::back()->with('message','Applicant approved!');
+        DB::table('applicant')
+            ->where('id', $id)
+            ->update([
+                'is_approved' => "1",
+            ]);
+
+        return redirect('/listofapplicants');
     }
 }

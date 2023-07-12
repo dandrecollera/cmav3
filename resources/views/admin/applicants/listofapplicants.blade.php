@@ -29,7 +29,7 @@
                             <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-toggle="modal"
                                 data-mdb-target="#viewModal">View</button>
                             <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-toggle="modal"
-                                data-mdb-target="#approveModal">Approve</button>
+                                data-mdb-target="#approveModal" data-appid="{{ $app->id }}">Approve</button>
                         </td>
                     </tr>
                 @endforeach
@@ -103,19 +103,26 @@
                 <h5 class="modal-title" id="exampleModalLabel">Applicant</h5>
                 <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="/approve" method="post" enctype="multipart/form-data">
-            @csrf
             <div class="modal-body">
-                <input type="hidden" name='id' value="{{ $app->id }}">
                 <h5>Do you really want to approve this applicant?</h5>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-dismiss="modal">Cancel</button>
-                <button type="submit" class="btn btn-dark btn-rounded approve-button">Yes</button>
+                <button type="submit" class="btn btn-dark btn-rounded btn-approve" id="confirmApprove">Confirm</button>
             </div>
-            </form>
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    $('.btn-approve').on('click', function() {
+    console.log('approve button clicked!');
+    console.log( $(this).data("appid") );
+    var iid = $(this).data("appid");
+    console.log(iid);
+    // Redirect to the approve route with the id parameter
+    $('#confirmApprove').prop('href', '/approve?id='+ iid);
+});
+</script>
 
 @endsection

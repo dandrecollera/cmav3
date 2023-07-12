@@ -51,7 +51,7 @@ Route::post('/application', [App\Http\Controllers\ApplicantController::class, 'a
     });
     //applicants
     Route::get('/listofapplicants', [App\Http\Controllers\ApplicantController::class, 'listofapplicants'])->name('listofapplicants');
-    Route::post('/approve', [App\Http\Controllers\ApplicantController::class, 'approve'])->name('approveapplicant');
+    //Route::get('/listofapplicants', [App\Http\Controllers\ApplicantController::class, 'approve'])->name('approveapplicants');
     Route::get('/listofapproved', function () {
         return view('admin.applicants.listofapproved');
     });
