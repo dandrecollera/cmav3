@@ -57,14 +57,6 @@
                     <input type="date" id="date" name="date" class="form-control"/>
                     <label class="form-label" for="form12">Date</label>
                 </div>
-                <div class="mb-3">
-                    <label for="inputFloorDes" class="form-label">Status</label>
-                    <select id="area" name="area" class="form-select">
-                        <option selected>Status</option>
-                        <option>Lost</option>
-                        <option>Found</option>
-                    </select>
-                </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-dismiss="modal">Close</button>
@@ -83,8 +75,8 @@
               <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div class="mb-3">
-                  <img src="/img/cma-admin1.png" style="width: 150px; height: 150px">
+                <div class="mb-3 d-flex flex-column align-items-center">
+                  <img src="/img/cma-admin1.png" class="img-fluid rounded" style="object-fit: cover; height: 150px; width:150px;">
                 </div>
                 <div class="mb-3 form-outline">
                     <input type="text" id="item" name="item" class="form-control" readonly/>
@@ -95,7 +87,7 @@
                     <label class="form-label" for="description">Description</label>
                 </div>
                 <div class="mb-3 form-outline">
-                    <input type="date" id="date" name="date" class="form-control" readonly/>
+                    <input type="text" id="date" name="date" class="form-control" readonly/>
                     <label class="form-label" for="form12">Date</label>
                 </div>
                 <div class="mb-3">

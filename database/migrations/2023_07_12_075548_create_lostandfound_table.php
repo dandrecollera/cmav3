@@ -15,6 +15,11 @@ class CreateLostandfoundTable extends Migration
     {
         Schema::create('lostandfound', function (Blueprint $table) {
             $table->id();
+            $table->string('image')->default('blank.jpg');
+            $table->string('item');
+            $table->string('description');
+            $table->string('date');
+            $table->string('status')->default('lost');
             $table->timestamps();
         });
     }
