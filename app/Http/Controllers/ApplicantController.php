@@ -99,7 +99,7 @@ class ApplicantController extends Controller
         $data = array();
 
         $data['apply'] = DB::table('applicant')
-            ->select('id','image','firstname', 'lastname','birthday','contactno','emailadd')
+            ->select('id','image','firstname', 'lastname','birthday','contactno','emailadd', 'address','requirements')
             ->get();
 
         return view('admin.applicants.listofapplicants', $data);
