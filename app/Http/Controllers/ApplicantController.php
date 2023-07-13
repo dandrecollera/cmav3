@@ -117,4 +117,16 @@ class ApplicantController extends Controller
 
         return redirect('/listofapplicants');
     }
+
+    public function applicantinfo(Request $request){
+        $query = $request->query();
+
+        $data['app'] = DB::table('applicant')
+            ->where('id', $query['id'])
+            ->select('id','image','firstname', 'lastname','birthday','contactno','emailadd', 'address','requirements')
+            ->first();
+
+        return view('admin.applicants.applicantinfo', $data);
+    }
+
 }
