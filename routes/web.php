@@ -49,6 +49,7 @@ Route::post('/application', [App\Http\Controllers\ApplicantController::class, 'a
     Route::get('/admin-dashboard', function () {
         return view('admin.admin-dashboard');
     });
+
     //applicants
     Route::get('/listofapplicants', [App\Http\Controllers\ApplicantController::class, 'listofapplicants'])->name('listofapplicants');
     Route::get('/listofapplicants', [App\Http\Controllers\ApplicantController::class, 'approve'])->name('approveapplicants');
@@ -110,8 +111,6 @@ Route::post('/application', [App\Http\Controllers\ApplicantController::class, 'a
         return view('admin.tenants.reports');
     });
 
-
-
     //admin-account-settings
     Route::get('/admin-account-settings', function () {
         return view('admin.admin-account-settings');
@@ -162,7 +161,6 @@ Route::post('/application', [App\Http\Controllers\ApplicantController::class, 'a
     Route::get('/tenant-report', function () {
         return view('tenant.tenant-report');
     });
-
 
 
 //TREASURY
