@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Floor;
-use App\Models\Section;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;

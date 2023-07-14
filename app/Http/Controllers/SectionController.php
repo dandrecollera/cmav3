@@ -10,7 +10,6 @@ class SectionController extends Controller
 {
     public function floorselect(Request $request)
     {
-
         $data = array();
 
         $data['floor'] = DB::table('floors')

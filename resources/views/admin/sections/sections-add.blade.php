@@ -24,7 +24,7 @@
                                 @foreach($floor as $floors)
                                     <option value="{{ $floors->floornum }}">{{ $floors->floornum }}</option>
                                 @endforeach
-                            </select>  
+                            </select> 
                         </div>
                         <div class="mb-3 form-outline">
                             <input type="text" id="section" name ="section" class="form-control"/>

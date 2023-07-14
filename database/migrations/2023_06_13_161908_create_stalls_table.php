@@ -14,12 +14,15 @@ class CreateStallsTable extends Migration
     public function up()
     {
         Schema::create('stalls', function (Blueprint $table) {
-            $table->id();
-            $table->string('floornum');
-            $table->string('section');
-            $table->string('area');
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('floor_id');
+            $table->unsignedBigInteger('section_id');
+            $table->unsignedBigInteger('area_id');
             $table->string('stallnum');
-            $table->timestamps();
+
+            $table->foreign('floor_id')->references('id')->on('floors')->onDelete('cascade');
+            $table->foreign('section_id')->references('id')->on('sections')->onDelete('cascade');
+            $table->foreign('area_id')->references('id')->on('area')->onDelete('cascade');
         });
     }
 

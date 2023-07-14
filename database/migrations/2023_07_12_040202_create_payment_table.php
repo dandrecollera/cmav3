@@ -14,15 +14,16 @@ class CreatePaymentTable extends Migration
     public function up()
     {
         Schema::create('payment', function (Blueprint $table) {
-            $table->id();
-            $table->integer('bill_id');
-            $table->integer('ornum');
+            $table->id();//official receipt num
+            $table->unsignedBigInteger('bill_id');
             $table->string('paymentdate');
             $table->string('modeofpayment');
             $table->string('amountpaid');
             $table->string('image')->default('blank.jpg');
             $table->string('referencenum');
             $table->timestamps();
+
+            $table->foreign('bill_id')->references('id')->on('bill')->onDelete('cascade');
         });
     }
 

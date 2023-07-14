@@ -14,11 +14,13 @@ class CreateAreaTable extends Migration
     public function up()
     {
         Schema::create('area', function (Blueprint $table) {
-            $table->id();
-            $table->string('floornum');
-            $table->string('section');
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('floor_id');
+            $table->unsignedBigInteger('section_id');
             $table->string('area');
-            $table->timestamps();
+
+            $table->foreign('floor_id')->references('id')->on('floors')->onDelete('cascade');
+            $table->foreign('section_id')->references('id')->on('sections')->onDelete('cascade');
         });
     }
 

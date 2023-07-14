@@ -15,7 +15,7 @@ class CreateTenantTable extends Migration
     {
         Schema::create('tenant', function (Blueprint $table) {
             $table->id();
-            $table->integer('applicant_id');
+            $table->unsignedBigInteger('applicant_id');
             $table->string('tenanttype');
             $table->string('stallname');
             $table->string('rentaltype');
@@ -24,6 +24,8 @@ class CreateTenantTable extends Migration
             $table->string('cusa');
             $table->string('totalfee');
             $table->timestamps();
+
+            $table->foreign('applicant_id')->references('id')->on('applicant')->onDelete('cascade');
         });
     }
 
