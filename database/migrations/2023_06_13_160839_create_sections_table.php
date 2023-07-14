@@ -14,10 +14,13 @@ class CreateSectionsTable extends Migration
     public function up()
     {
         Schema::create('sections', function (Blueprint $table) {
-            $table->id();
-            $table->string('floornum');
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('floor_id');
             $table->string('section');
             $table->timestamps();
+
+            $table->foreign('floor_id')->references('id')->on('floors')->onDelete('cascade');
+
         });
     }
 

@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Floor;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
@@ -11,14 +10,12 @@ class FloorController extends Controller
 {
     public function flooradd(Request $request)
     {
-        $floornum = $request->input('floornum');
-        $floordesc = $request->input('floordesc');
 
-        // save data to database
-        $floor = new Floor;
-        $floor->floornum = $floornum;
-        $floor->floordesc = $floordesc;
-        $floor->save();
+        DB::table('floors')->insert([
+            'floornum' => $request->input('floornum'),
+            'floordesc' => $request->input('floordesc'),
+        ]);
+
 
         // redirect to a success page
         return redirect('/floor-add')->with('success', 'Floor added successfully!');
@@ -26,7 +23,12 @@ class FloorController extends Controller
 
     public function floorview()
     {
-        $floor = DB::table('floors')->select('id','floornum','floordesc')->get();
-        return view('admin.floors.floor-view', compact('floor'));
+        $data = array();
+
+        $data['floor'] = DB::table('floors')
+            ->select('id','floornum','floordesc')
+            ->get();
+
+        return view('admin.floors.floor-view', $data);
     }
 }

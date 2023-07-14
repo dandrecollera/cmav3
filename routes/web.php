@@ -49,9 +49,10 @@ Route::post('/application', [App\Http\Controllers\ApplicantController::class, 'a
     Route::get('/admin-dashboard', function () {
         return view('admin.admin-dashboard');
     });
+
     //applicants
     Route::get('/listofapplicants', [App\Http\Controllers\ApplicantController::class, 'listofapplicants'])->name('listofapplicants');
-    //Route::get('/listofapplicants', [App\Http\Controllers\ApplicantController::class, 'approve'])->name('approveapplicants');
+    Route::get('/listofapplicants', [App\Http\Controllers\ApplicantController::class, 'approve'])->name('approveapplicants');
     Route::get('/applicantinfo', [App\Http\Controllers\ApplicantController::class, 'applicantinfo'])->name('applicantinfo');
     Route::get('/listofapproved', function () {
         return view('admin.applicants.listofapproved');
@@ -61,6 +62,7 @@ Route::post('/application', [App\Http\Controllers\ApplicantController::class, 'a
     Route::get('/area-add', function () {
         return view('admin.area.area-add');
     });
+    Route::get('/area-add', [App\Http\Controllers\AreaController::class, 'dropdown'])->name('dropdown');
     Route::get('/area-view', function () {
         return view('admin.area.area-view');
     });
@@ -84,13 +86,9 @@ Route::post('/application', [App\Http\Controllers\ApplicantController::class, 'a
     });
 
     //sections
-    Route::get('/sections-add', function () {
-        return view('admin.sections.sections-add');
-    });
+    Route::get('/sections-add', [App\Http\Controllers\SectionController::class, 'floorselect'])->name('floorselect');
     Route::post('/addsection', [App\Http\Controllers\SectionController::class, 'sectionadd'])->name('sectionadd');
-    Route::get('/sections-view', function () {
-        return view('admin.sections.sections-view');
-    });
+    Route::get('/sections-view', [App\Http\Controllers\SectionController::class, 'sectionview'])->name('sectionview');
 
     //stalls
     Route::get('/stalls-add', function () {
@@ -113,8 +111,6 @@ Route::post('/application', [App\Http\Controllers\ApplicantController::class, 'a
     Route::get('/reports', function () {
         return view('admin.tenants.reports');
     });
-
-
 
     //admin-account-settings
     Route::get('/admin-account-settings', function () {
@@ -166,7 +162,6 @@ Route::post('/application', [App\Http\Controllers\ApplicantController::class, 'a
     Route::get('/tenant-report', function () {
         return view('tenant.tenant-report');
     });
-
 
 
 //TREASURY

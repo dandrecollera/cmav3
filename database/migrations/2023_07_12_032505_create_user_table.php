@@ -15,12 +15,14 @@ class CreateUserTable extends Migration
     {
         Schema::create('user', function (Blueprint $table) {
             $table->id();
-            $table->integer('tenantinfo_id');
+            $table->unsignedBigInteger('tenant_id');
             $table->string('accountname');
             $table->string('email');
             $table->string('password');
             $table->string('role');
             $table->timestamps();
+
+            $table->foreign('tenant_id')->references('id')->on('tenant')->onDelete('cascade');
         });
     }
 

@@ -14,9 +14,8 @@ class CreateBillTable extends Migration
     public function up()
     {
         Schema::create('bill', function (Blueprint $table) {
-            $table->id();
-            $table->integer('tenantinfo_id');
-            $table->integer('billno');
+            $table->id();//billno
+            $table->unsignedBigInteger('tenant_id');
             $table->string('month');
             $table->string('billdate');//every 15th of the month
             $table->string('billingperiod');//every first to last day of the month
@@ -24,6 +23,8 @@ class CreateBillTable extends Migration
             $table->string('outstandingbalance');// 0.00 + total amount from last billing
             $table->string('totalamount'); //totalfee from tenant table + outstanding balance
             $table->timestamps();
+
+            $table->foreign('tenant_id')->references('id')->on('tenant')->onDelete('cascade');
         });
     }
 

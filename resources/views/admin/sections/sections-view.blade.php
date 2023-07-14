@@ -12,18 +12,14 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Lower Ground Floor</td>
-                <td>Rice</td>
-            </tr>
-            <tr>
-                <td>Upper Ground Floor</td>
-                <td>Concuts</td>
-            </tr>
-            <tr>
-                <td>2nd Floor</td>
-                <td>Mercury</td>
-            </tr>
+          @if(isset($section))
+          @foreach($section as $sect)
+              <tr>
+                  <td>{{ $sect->floornum }}</td>
+                  <td>{{ $sect->section }}</td>
+              </tr>
+          @endforeach
+      @endif
         </tbody>
     </table>
   </div>

@@ -52,16 +52,17 @@
                     <iframe id="applicantinfo" src="/adminsection_add" width="100%" height="450px"
                         style="border:none"></iframe>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-dark btn-rounded"
-                        data-mdb-dismiss="modal">Close</button>
-                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
 </div>
+</div>
 
-<!-- view Modal -->
+<!-- Approve Modal -->
 <div class="modal fade" id="approveModal" tabindex="-1" aria-labelledby="approveModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
