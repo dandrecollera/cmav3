@@ -53,6 +53,7 @@ Route::post('/application', [App\Http\Controllers\ApplicantController::class, 'a
     //applicants
     Route::get('/listofapplicants', [App\Http\Controllers\ApplicantController::class, 'listofapplicants'])->name('listofapplicants');
     Route::get('/listofapplicants', [App\Http\Controllers\ApplicantController::class, 'approve'])->name('approveapplicants');
+    Route::get('/applicantinfo', [App\Http\Controllers\ApplicantController::class, 'applicantinfo'])->name('applicantinfo');
     Route::get('/listofapproved', function () {
         return view('admin.applicants.listofapproved');
     });
@@ -88,7 +89,7 @@ Route::post('/application', [App\Http\Controllers\ApplicantController::class, 'a
     Route::get('/sections-add', [App\Http\Controllers\SectionController::class, 'floorselect'])->name('floorselect');
     Route::post('/addsection', [App\Http\Controllers\SectionController::class, 'sectionadd'])->name('sectionadd');
     Route::get('/sections-view', [App\Http\Controllers\SectionController::class, 'sectionview'])->name('sectionview');
-    
+
     //stalls
     Route::get('/stalls-add', function () {
         return view('admin.stalls.stalls-add');
