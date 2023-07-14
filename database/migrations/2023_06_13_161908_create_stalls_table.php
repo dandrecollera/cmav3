@@ -19,7 +19,8 @@ class CreateStallsTable extends Migration
             $table->unsignedBigInteger('section_id');
             $table->unsignedBigInteger('area_id');
             $table->string('stallnum');
-
+            $table->timestamps();
+            
             $table->foreign('floor_id')->references('id')->on('floors')->onDelete('cascade');
             $table->foreign('section_id')->references('id')->on('sections')->onDelete('cascade');
             $table->foreign('area_id')->references('id')->on('area')->onDelete('cascade');
