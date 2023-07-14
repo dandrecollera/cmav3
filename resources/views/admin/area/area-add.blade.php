@@ -15,7 +15,8 @@
                                 <select id="floornum" name="floornum" class="form-select">
                                     <option selected>Choose Floor</option>
                                     @foreach($area as $floor)
-                                        <option value="{{ $floor->floornum }}">{{ $floor->floornum }}</option>
+                                        <option value="{{ $floor->floornum }}">
+                                            {{ $floor->floornum }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -23,7 +24,7 @@
                                 <select id="section" name="section" class="form-select">
                                     <option selected>Choose Section</option>
                                     @foreach($area as $section)
-                                        <option value="{{ $section->section }}" data-floor="{{ $section->floornum }}">{{ $section->section }}</option>
+                                        <option value="{{ $section->section }}" data-floor="{{ $section->floornum }}"> {{ $section->section }}</option>
                                     @endforeach
                                 </select>
                             </div>
