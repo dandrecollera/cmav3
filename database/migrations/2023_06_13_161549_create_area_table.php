@@ -18,6 +18,7 @@ class CreateAreaTable extends Migration
             $table->unsignedBigInteger('floor_id');
             $table->unsignedBigInteger('section_id');
             $table->string('area');
+            $table->timestamps();
 
             $table->foreign('floor_id')->references('id')->on('floors')->onDelete('cascade');
             $table->foreign('section_id')->references('id')->on('sections')->onDelete('cascade');
